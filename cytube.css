@@ -450,8 +450,15 @@ input#logout.navbar-link:hover {
 }
 
 /* ===================================================
-   AJUSTES PANEL CANAL Y MODALES (ROCKRITICO - EDICIÓN FINAL)
+   AJUSTES PANEL CANAL Y MODALES (ROCKRITICO - EDICIÓN COMPLETA)
    =================================================== */
+
+/* Fondo oscuro de la pantalla al abrir modal (más transparente) */
+.modal-backdrop,
+.modal-backdrop.in {
+  opacity: 0.25 !important;
+  background-color: #000000 !important;
+}
 
 /* Separación superior para no tapar la navbar */
 .modal-dialog {
@@ -486,6 +493,19 @@ input#logout.navbar-link:hover {
   margin-top: 10px !important;
 }
 
+/* --- TÍTULO PRINCIPAL (Channel Settings) CON SHRIKHAND --- */
+.modal-header .modal-title,
+.modal-header h3,
+.modal-header h4,
+#channeloptions > h3 {
+  font-family: 'Shrikhand', cursive !important;
+  color: #22221a !important;
+  font-size: 20px !important;
+  margin: 0 0 6px 0 !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
 /* Instructions and descriptions (MOTD/CSS) */
 #cs-css-doc,
 #cs-motd-doc,
@@ -498,7 +518,6 @@ input#logout.navbar-link:hover {
   margin-top: 6px !important;
   margin-bottom: 12px !important;
 }
-
 
 /* --- FILAS DE OPCIONES Y CHECKBOXES --- */
 .form-horizontal .form-group {
@@ -540,7 +559,7 @@ input#logout.navbar-link:hover {
   margin-bottom: 6px !important;
 }
 
-/* --- EDITORES Y CAJAS DE TEXTO --- */
+/* --- EDITORES, CAJAS DE TEXTO Y CAJA DE LOGS (FILTER LOG) --- */
 .modal-content textarea,
 #cs-css-text,
 #cs-motd-text {
@@ -552,6 +571,23 @@ input#logout.navbar-link:hover {
   border-radius: 6px !important;
   padding: 8px !important;
   font-family: monospace !important;
+}
+
+/* Arreglo para la caja diminuta de Filter Log / Channel Log */
+.modal-body pre,
+#cs-chanlog-filter,
+#cs-chanlog-text {
+  background-color: #121318 !important;
+  color: #c4f85e !important;
+  border: 1.5px solid #22221a !important;
+  border-radius: 6px !important;
+  padding: 10px !important;
+  height: 240px !important;
+  max-height: 350px !important;
+  overflow-y: auto !important;
+  font-family: monospace !important;
+  font-size: 12px !important;
+  line-height: 1.4 !important;
 }
 
 .modal-content input[type="text"],
@@ -626,7 +662,6 @@ input#logout.navbar-link:hover {
   border-bottom: none !important;
 }
 
-/* La línea fucsia de lado a lado estará AQUÍ, pegada a la base de las tabs */
 .nav-tabs {
   border-bottom: 2px solid #f31b53 !important;
   margin-bottom: 12px !important;
@@ -663,14 +698,14 @@ input#logout.navbar-link:hover {
   background-image: none !important;
   color: #ffffff !important;
   border: 1px solid #22221a !important;
-  border-bottom-color: #f31b53 !important; /* Se fusiona limpiamente con la línea de la base */
+  border-bottom-color: #f31b53 !important;
   border-radius: 5px 5px 0 0 !important;
 }
 
-/* Títulos internos dentro de cada pestaña (se elimina su borde inferior para no duplicar) */
-#channeloptions h3,
+/* Subtítulos de sección (General Settings, Channel Log, etc.) */
 #channeloptions legend,
-.modal-body h4 {
+.modal-body h4,
+.modal-body h3 {
   font-family: 'Shrikhand', cursive !important;
   color: #f31b53 !important;
   font-size: 16px !important;
