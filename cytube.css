@@ -804,68 +804,285 @@ input#logout.navbar-link:hover {
 }
 
 /* ===================================================
-   RESET Y AJUSTES DE PANELS Y DEPURACIÓN FUERZA BRUTA
+   CORRECCIÓN DEL FILTER LOG (MÁS ALTURA) Y TRANSPARENCIA
    =================================================== */
 
-/* --- 1. FONDO DE PANTALLA MÁS TRANSPARENTE AL ABRIR AJUSTES --- */
+/* 1. Fondo translúcido del modal */
+.modal-content,
+#channeloptions {
+  background-color: rgba(231, 231, 231, 0.40) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+}
+
+/* Telón de fondo (Backdrop) muy tenue */
 .modal-backdrop,
-.modal-backdrop.in,
-.modal-backdrop.fade {
-  opacity: 0.20 !important;
-  filter: alpha(opacity=20) !important;
+.modal-backdrop.in {
+  opacity: 0.15 !important;
   background-color: #000000 !important;
 }
 
-/* --- 2. FUENTE "SHRIKHAND" EN LOS TÍTULOS DEL MENÚ --- */
-/* Título superior (Channel Settings) */
-.modal-header h3,
-.modal-header h4,
-.modal-title,
-#channeloptions > h3,
-#channeloptions .modal-header * {
-  font-family: 'Shrikhand', cursive !important;
-  color: #22221a !important;
-  font-size: 22px !important;
-  text-transform: none !important;
+/* 2. Lista de Filter Log con más altura para ver múltiples opciones */
+#cs-chanlog-filter-opt,
+#cs-chanlog-tbl select,
+.modal-body select[id*="chanlog"] {
+  width: 100% !important;
+  max-width: 280px !important;
+  height: 110px !important; /* Altura suficiente para mostrar unas 5-6 líneas */
+  min-height: 90px !important;
+  background-color: #121318 !important;
+  color: #c4f85e !important;
+  border: 1.5px solid #22221a !important;
+  border-radius: 5px !important;
+  padding: 4px !important;
+  font-family: monospace !important;
+  font-size: 12px !important;
+  margin-top: 4px !important;
+  margin-bottom: 10px !important;
+  display: block !important;
+  overflow-y: auto !important;
 }
 
-/* Títulos de secciones internas (General Settings, Channel Log, etc.) */
-#channeloptions legend,
-#channeloptions h3,
-#channeloptions h4,
-.modal-body h3,
-.modal-body h4 {
-  font-family: 'Shrikhand', cursive !important;
+/* Opciones dentro de la lista de filtros */
+#cs-chanlog-filter-opt option,
+.modal-body select[id*="chanlog"] option {
+  background-color: #121318 !important;
+  color: #ffffff !important;
+  padding: 3px 6px !important;
+}
+
+#cs-chanlog-filter-opt option:selected,
+.modal-body select[id*="chanlog"] option:selected {
+  background-color: #f31b53 !important;
+  color: #ffffff !important;
+}
+
+/* ===================================================
+   AJUSTES PESTAÑA EMOTES & PAGINADOR Y2K
+   =================================================== */
+
+/* 1. Espaciado y alineación entre Search y Sort alphabetically */
+#cs-emotes .form-inline {
+  margin-top: 15px !important;
+  margin-bottom: 12px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 15px !important; /* Genera espacio limpio entre el input y el checkbox */
+}
+
+#cs-emotes .emotelist-search {
+  width: 200px !important;
+  height: 28px !important;
+  background-color: #121318 !important;
+  color: #ffffff !important;
+  border: 1.5px solid #22221a !important;
+  border-radius: 4px !important;
+  padding: 2px 8px !important;
+  font-family: monospace !important;
+}
+
+#cs-emotes .checkbox label {
+  font-family: 'Segoe UI', sans-serif !important;
+  font-weight: bold !important;
   color: #f31b53 !important;
-  font-size: 18px !important;
-  border: none !important;
+  font-size: 13px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+
+/* 2. Formato Y2K para la tabla de Emotes (.emotelist-table) */
+.emotelist-table {
+  background-color: #121318 !important;
+  border: 2px solid #22221a !important;
+  border-radius: 6px !important;
+  overflow: hidden !important;
   margin-top: 10px !important;
 }
 
-/* --- 3. AGRANDAR LA CAJA Y LA TABLA DEL FILTER LOG / CHANNEL LOG --- */
-/* Agrandar el contenedor del log */
-#cs-chanlog-filter,
-#cs-chanlog-text,
-#channeloptions pre,
-.modal-body pre {
-  height: 350px !important;
-  max-height: 500px !important;
-  min-height: 250px !important;
-  background-color: #121318 !important;
-  color: #c4f85e !important;
-  border: 2px solid #22221a !important;
-  border-radius: 6px !important;
-  padding: 10px !important;
-  font-family: monospace !important;
-  font-size: 13px !important;
-  line-height: 1.5 !important;
-  overflow-y: auto !important;
-  white-space: pre-wrap !important;
+.emotelist-table th {
+  background-color: #e7e7e7 !important;
+  color: #f31b53 !important;
+  font-family: 'Shrikhand', cursive !important;
+  font-size: 15px !important;
+  border-bottom: 2px solid #22221a !important;
+  padding: 8px !important;
 }
 
-/* Agrandar el cuadro desplegable de la opción de filtro */
-#cs-chanlog-filter-opt,
-#cs-chanlog-tbl {
-  width: 100% !important;
-  min-width: 250px !important;
+.emotelist-table td {
+  border-top: 1px solid #22221a !important;
+  padding: 6px 8px !important;
+  vertical-align: middle !important;
+}
+
+/* 3. Formato para el Paginador (First, «, 1, », Last) */
+.emotelist-paginator-container {
+  text-align: center !important;
+  margin: 12px 0 !important;
+}
+
+.pagination {
+  margin: 0 !important;
+  display: inline-flex !important;
+  gap: 4px !important;
+}
+
+.pagination > li > a,
+.pagination > li > span {
+  background-color: #f31b53 !important;
+  color: #ffffff !important;
+  border: 1.5px solid #22221a !important;
+  border-radius: 4px !important;
+  font-family: 'Boldonse', sans-serif !important;
+  font-size: 12px !important;
+  padding: 4px 10px !important;
+  box-shadow: 2px 2px 0px #22221a !important;
+  transition: all 0.15s ease !important;
+}
+
+.pagination > li > a:hover,
+.pagination > li > a:focus {
+  background-color: #c4f85e !important;
+  color: #22221a !important;
+}
+
+/* Botones deshabilitados del paginador */
+.pagination > .disabled > a,
+.pagination > .disabled > a:hover,
+.pagination > .disabled > span {
+  background-color: rgba(18, 19, 24, 0.4) !important;
+  color: #777777 !important;
+  border-color: #22221a !important;
+  box-shadow: none !important;
+  cursor: not-allowed !important;
+}
+
+/* ===================================================
+   AJUSTE DE TAMAÑO "NAME" Y BOTONES EN MODERATOR LIST
+   =================================================== */
+
+/* Ajustar el contenedor para que no ocupe todo el ancho horizontal */
+#cs-chanranks .input-group {
+  display: flex !important;
+  align-items: center !important;
+  width: auto !important;
+  max-width: 500px !important; /* Limita el ancho total del conjunto */
+}
+
+/* Reducir el cuadro de texto "Name" a un ancho cómodo */
+#cs-chanranks-name {
+  width: 200px !important; /* Tamaño compacto para el campo de texto */
+  max-width: 200px !important;
+  flex: none !important;
+  border-radius: 5px !important;
+}
+
+/* Espaciado y bordes individuales para los botones */
+#cs-chanranks .input-group-btn {
+  display: flex !important;
+  gap: 6px !important;
+  margin-left: 8px !important;
+  width: auto !important;
+}
+
+#cs-chanranks .input-group-btn .btn {
+  border-radius: 5px !important;
+  margin: 0 !important;
+}
+
+/* ===================================================
+   MOTD - SEPARADORES HEREDAN FUENTE DE SU SECCIÓN
+   =================================================== */
+
+#motd {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 10px 0 !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+}
+
+#motd br {
+  display: none !important;
+}
+
+/* 1. TÍTULO PRINCIPAL (BOLDONSE) */
+#motd h1:first-child {
+  font-family: 'Boldonse', sans-serif !important;
+  color: #f31b53 !important;
+  font-size: 26px !important;
+  margin: 0 0 10px 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  text-shadow: none !important;
+}
+
+/* "DE" en negro absoluto */
+#motd h1:first-child .de-text {
+  color: #000000 !important;
+  text-shadow: none !important;
+}
+
+/* Año "2026" con Shrikhand */
+#motd h1:first-child .year {
+  font-family: 'Shrikhand', cursive !important;
+  color: #f31b53 !important;
+  font-size: 28px !important;
+  font-weight: normal !important;
+}
+
+/* Logo Inline */
+#motd .inline-logo {
+  height: 40px !important;
+  width: auto !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+}
+
+/* 2. CORAZONES */
+#motd h1.motd-hearts {
+  font-size: 22px !important;
+  color: #f31b53 !important;
+  margin: 14px 0 8px 0 !important;
+  line-height: 1 !important;
+  text-shadow: none !important;
+}
+
+/* 3. HEADLINERS -> BAGEL FAT ONE (TEXTO NEGRO + SOMBRA VERDE NEÓN) */
+#motd h2.headliner {
+  font-family: 'Bagel Fat One', cursive !important;
+  color: #1a1a1a !important;
+  font-size: 20px !important;
+  line-height: 1.5 !important;
+  margin: 8px 0 !important;
+  font-weight: normal !important;
+  letter-spacing: 1px !important;
+  text-shadow: 2px 2px 0px #ffffff !important;
+  filter: none !important;
+}
+
+/* 4. UNDERCARD -> BOLDONSE (TEXTO NEGRO + SOMBRA VERDE NEÓN) */
+#motd h2:not(.headliner) {
+  font-family: 'Boldonse', sans-serif !important;
+  color: #1a1a1a !important;
+  font-size: 13px !important;
+  line-height: 1.6 !important;
+  margin: 5px 0 !important;
+  font-weight: normal !important;
+  letter-spacing: 0.5px !important;
+  text-shadow: 1.5px 1.5px 0px #ffffff !important;
+  filter: none !important;
+}
+
+/* 5. SEPARADORES "/" (VERDE NEÓN CON SOMBRA NEGRA + HEREDAN FUENTE DE SU LÍNEA) */
+#motd .slash {
+  font-family: inherit !important; /* Hereda Bagel Fat One o Boldonse según dónde esté */
+  color: #f31b53 !important; /* Verde neón */
+  text-shadow: 1.5px 1.5px 0px #000000 !important; /* Sombra negra marcada */
+  font-weight: bold !important;
+  padding: 0 4px !important;
+  display: inline-block !important;
 }
