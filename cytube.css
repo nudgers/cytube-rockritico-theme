@@ -802,3 +802,70 @@ input#logout.navbar-link:hover {
   border-color: #22221a !important;
   color: #ffffff !important;
 }
+
+/* ===================================================
+   RESET Y AJUSTES DE PANELS Y DEPURACIÓN FUERZA BRUTA
+   =================================================== */
+
+/* --- 1. FONDO DE PANTALLA MÁS TRANSPARENTE AL ABRIR AJUSTES --- */
+.modal-backdrop,
+.modal-backdrop.in,
+.modal-backdrop.fade {
+  opacity: 0.20 !important;
+  filter: alpha(opacity=20) !important;
+  background-color: #000000 !important;
+}
+
+/* --- 2. FUENTE "SHRIKHAND" EN LOS TÍTULOS DEL MENÚ --- */
+/* Título superior (Channel Settings) */
+.modal-header h3,
+.modal-header h4,
+.modal-title,
+#channeloptions > h3,
+#channeloptions .modal-header * {
+  font-family: 'Shrikhand', cursive !important;
+  color: #22221a !important;
+  font-size: 22px !important;
+  text-transform: none !important;
+}
+
+/* Títulos de secciones internas (General Settings, Channel Log, etc.) */
+#channeloptions legend,
+#channeloptions h3,
+#channeloptions h4,
+.modal-body h3,
+.modal-body h4 {
+  font-family: 'Shrikhand', cursive !important;
+  color: #f31b53 !important;
+  font-size: 18px !important;
+  border: none !important;
+  margin-top: 10px !important;
+}
+
+/* --- 3. AGRANDAR LA CAJA Y LA TABLA DEL FILTER LOG / CHANNEL LOG --- */
+/* Agrandar el contenedor del log */
+#cs-chanlog-filter,
+#cs-chanlog-text,
+#channeloptions pre,
+.modal-body pre {
+  height: 350px !important;
+  max-height: 500px !important;
+  min-height: 250px !important;
+  background-color: #121318 !important;
+  color: #c4f85e !important;
+  border: 2px solid #22221a !important;
+  border-radius: 6px !important;
+  padding: 10px !important;
+  font-family: monospace !important;
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+  overflow-y: auto !important;
+  white-space: pre-wrap !important;
+}
+
+/* Agrandar el cuadro desplegable de la opción de filtro */
+#cs-chanlog-filter-opt,
+#cs-chanlog-tbl {
+  width: 100% !important;
+  min-width: 250px !important;
+}
