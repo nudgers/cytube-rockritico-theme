@@ -1085,3 +1085,487 @@ input#logout.navbar-link:hover {
   padding: 0 4px !important;
   display: inline-block !important;
 }
+
+/* ===================================================
+   CORRECCIÓN DEL FILTER LOG (MÁS ALTURA) Y TRANSPARENCIA
+   =================================================== */
+
+/* 1. Fondo translúcido del modal */
+.modal-content,
+#channeloptions {
+  background-color: rgba(231, 231, 231, 0.40) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+}
+
+/* Telón de fondo (Backdrop) muy tenue */
+.modal-backdrop,
+.modal-backdrop.in {
+  opacity: 0.15 !important;
+  background-color: #000000 !important;
+}
+
+/* 2. Lista de Filter Log con más altura para ver múltiples opciones */
+#cs-chanlog-filter-opt,
+#cs-chanlog-tbl select,
+.modal-body select[id*="chanlog"] {
+  width: 100% !important;
+  max-width: 280px !important;
+  height: 110px !important;
+  min-height: 90px !important;
+  background-color: #121318 !important;
+  color: #c4f85e !important;
+  border: 1.5px solid #22221a !important;
+  border-radius: 5px !important;
+  padding: 4px !important;
+  font-family: monospace !important;
+  font-size: 12px !important;
+  margin-top: 4px !important;
+  margin-bottom: 10px !important;
+  display: block !important;
+  overflow-y: auto !important;
+}
+
+/* Opciones dentro de la lista de filtros */
+#cs-chanlog-filter-opt option,
+.modal-body select[id*="chanlog"] option {
+  background-color: #121318 !important;
+  color: #ffffff !important;
+  padding: 3px 6px !important;
+}
+
+#cs-chanlog-filter-opt option:selected,
+.modal-body select[id*="chanlog"] option:selected {
+  background-color: #f31b53 !important;
+  color: #ffffff !important;
+}
+
+/* ===================================================
+   AJUSTES PESTAÑA EMOTES & PAGINADOR Y2K
+   =================================================== */
+
+/* 1. Espaciado y alineación entre Search y Sort alphabetically */
+#cs-emotes .form-inline {
+  margin-top: 15px !important;
+  margin-bottom: 12px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 15px !important;
+}
+
+#cs-emotes .emotelist-search {
+  width: 200px !important;
+  height: 28px !important;
+  background-color: #121318 !important;
+  color: #ffffff !important;
+  border: 1.5px solid #22221a !important;
+  border-radius: 4px !important;
+  padding: 2px 8px !important;
+  font-family: monospace !important;
+}
+
+#cs-emotes .checkbox label {
+  font-family: 'Segoe UI', sans-serif !important;
+  font-weight: bold !important;
+  color: #f31b53 !important;
+  font-size: 13px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+
+/* 2. Formato Y2K para la tabla de Emotes (.emotelist-table) */
+.emotelist-table {
+  background-color: #121318 !important;
+  border: 2px solid #22221a !important;
+  border-radius: 6px !important;
+  overflow: hidden !important;
+  margin-top: 10px !important;
+}
+
+.emotelist-table th {
+  background-color: #e7e7e7 !important;
+  color: #f31b53 !important;
+  font-family: 'Shrikhand', cursive !important;
+  font-size: 15px !important;
+  border-bottom: 2px solid #22221a !important;
+  padding: 8px !important;
+}
+
+.emotelist-table td {
+  border-top: 1px solid #22221a !important;
+  padding: 6px 8px !important;
+  vertical-align: middle !important;
+}
+
+/* 3. Formato para el Paginador (First, «, 1, », Last) */
+.emotelist-paginator-container {
+  text-align: center !important;
+  margin: 12px 0 !important;
+}
+
+.pagination {
+  margin: 0 !important;
+  display: inline-flex !important;
+  gap: 4px !important;
+}
+
+.pagination > li > a,
+.pagination > li > span {
+  background-color: #f31b53 !important;
+  color: #ffffff !important;
+  border: 1.5px solid #22221a !important;
+  border-radius: 4px !important;
+  font-family: 'Boldonse', sans-serif !important;
+  font-size: 12px !important;
+  padding: 4px 10px !important;
+  box-shadow: 2px 2px 0px #22221a !important;
+  transition: all 0.15s ease !important;
+}
+
+.pagination > li > a:hover,
+.pagination > li > a:focus {
+  background-color: #c4f85e !important;
+  color: #22221a !important;
+}
+
+/* Botones deshabilitados del paginador */
+.pagination > .disabled > a,
+.pagination > .disabled > a:hover,
+.pagination > .disabled > span {
+  background-color: rgba(18, 19, 24, 0.4) !important;
+  color: #777777 !important;
+  border-color: #22221a !important;
+  box-shadow: none !important;
+  cursor: not-allowed !important;
+}
+
+/* ===================================================
+   AJUSTE DE TAMAÑO "NAME" Y BOTONES EN MODERATOR LIST
+   =================================================== */
+
+#cs-chanranks .input-group {
+  display: flex !important;
+  align-items: center !important;
+  width: auto !important;
+  max-width: 500px !important;
+}
+
+#cs-chanranks-name {
+  width: 200px !important;
+  max-width: 200px !important;
+  flex: none !important;
+  border-radius: 5px !important;
+}
+
+#cs-chanranks .input-group-btn {
+  display: flex !important;
+  gap: 6px !important;
+  margin-left: 8px !important;
+  width: auto !important;
+}
+
+#cs-chanranks .input-group-btn .btn {
+  border-radius: 5px !important;
+  margin: 0 !important;
+}
+
+/* ===================================================
+   MOTD - SEPARADORES HEREDAN FUENTE DE SU SECCIÓN
+   =================================================== */
+
+#motd {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 10px 0 !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+}
+
+#motd br {
+  display: none !important;
+}
+
+/* 1. TÍTULO PRINCIPAL (BOLDONSE) */
+#motd h1:first-child {
+  font-family: 'Boldonse', sans-serif !important;
+  color: #f31b53 !important;
+  font-size: 26px !important;
+  margin: 0 0 10px 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  text-shadow: none !important;
+}
+
+#motd h1:first-child .de-text {
+  color: #000000 !important;
+  text-shadow: none !important;
+}
+
+#motd h1:first-child .year {
+  font-family: 'Shrikhand', cursive !important;
+  color: #f31b53 !important;
+  font-size: 28px !important;
+  font-weight: normal !important;
+}
+
+#motd .inline-logo {
+  height: 40px !important;
+  width: auto !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+}
+
+/* 2. CORAZONES */
+#motd h1.motd-hearts {
+  font-size: 22px !important;
+  color: #f31b53 !important;
+  margin: 14px 0 8px 0 !important;
+  line-height: 1 !important;
+  text-shadow: none !important;
+}
+
+/* 3. HEADLINERS */
+#motd h2.headliner {
+  font-family: 'Bagel Fat One', cursive !important;
+  color: #1a1a1a !important;
+  font-size: 20px !important;
+  line-height: 1.5 !important;
+  margin: 8px 0 !important;
+  font-weight: normal !important;
+  letter-spacing: 1px !important;
+  text-shadow: 2px 2px 0px #ffffff !important;
+  filter: none !important;
+}
+
+/* 4. UNDERCARD */
+#motd h2:not(.headliner) {
+  font-family: 'Boldonse', sans-serif !important;
+  color: #1a1a1a !important;
+  font-size: 13px !important;
+  line-height: 1.6 !important;
+  margin: 5px 0 !important;
+  font-weight: normal !important;
+  letter-spacing: 0.5px !important;
+  text-shadow: 1.5px 1.5px 0px #ffffff !important;
+  filter: none !important;
+}
+
+/* 5. SEPARADORES "/" */
+#motd .slash {
+  font-family: inherit !important;
+  color: #f31b53 !important;
+  text-shadow: 1.5px 1.5px 0px #000000 !important;
+  font-weight: bold !important;
+  padding: 0 4px !important;
+  display: inline-block !important;
+}
+
+/* ===================================================
+   CHAT - ESTRUCTURA DE FUENTES (CORREGIDO)
+   =================================================== */
+
+#messagebuffer {
+  color: #22221a !important;
+}
+
+/* 1. FUENTE OREGANO (Únicamente para los mensajes normales) */
+#chatline,
+#messagebuffer > div:not([class*="server"]):not([class*="reconnect"]):not([class*="disconnect"]):not([class*="Botkritico"]):not([class*="botkritico"]) span:last-child,
+#messagebuffer > div:not([class*="server"]):not([class*="reconnect"]):not([class*="disconnect"]):not([class*="Botkritico"]):not([class*="botkritico"]) .chat-msg-text {
+  font-family: 'Oregano', cursive, sans-serif !important;
+  font-size: 20px !important;
+}
+
+/* 2. MENSAJES DE SERVIDOR / CONEXIÓN EN SILKSCREEN */
+#messagebuffer div.server-msg-reconnect,
+#messagebuffer div.server-msg-disconnect,
+#messagebuffer [class*="server-msg-"],
+#messagebuffer [class*="server-whisper"],
+#messagebuffer [class*="server"],
+#messagebuffer [class*="reconnect"],
+#messagebuffer [class*="disconnect"] {
+  font-family: 'Silkscreen', cursive, monospace !important;
+  font-size: 11px !important;
+  text-shadow: none !important;
+}
+
+/* 3. USERNAMES (Boldonse NO negrita) */
+#messagebuffer .username,
+#userlist,
+#userlist .userlist_item,
+#userlist span {
+  font-family: 'Boldonse', sans-serif !important;
+  font-weight: normal !important;
+  font-size: 11px !important;
+}
+
+/* 4. TIMESTAMPS (Monospace) */
+#messagebuffer .timestamp {
+  font-family: monospace !important;
+  color: #888888 !important;
+  font-size: 11px !important;
+}
+
+/* 5. TEXTO DE BOTKRITICO (Pixelify Sans) */
+#messagebuffer div[class*="Botkritico"] > span:last-child,
+#messagebuffer div[class*="botkritico"] > span:last-child,
+#messagebuffer div[class*="Botkritico"] .chat-msg-text,
+#messagebuffer div[class*="botkritico"] .chat-msg-text {
+  font-family: 'Pixelify Sans', sans-serif !important;
+  font-size: 16px !important;
+}
+
+/* ===================================================
+   CHAT HEADER Y USERLIST (SILKSCREEN + FIXES)
+   =================================================== */
+
+/* 1. HEADER GENERAL */
+#chatheader {
+  padding: 2px 4px !important; /* 2px vertical, 4px horizontal para dar margen interno */
+  margin-bottom: 8px !important;
+  border-bottom: 2px solid #a8e028 !important;
+  background: transparent !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* 2. CONTADOR DE USUARIOS EN SILKSCREEN */
+#usercount {
+  font-family: 'Silkscreen', cursive, monospace !important;
+  font-size: 12px !important;
+  font-weight: normal !important;
+  color: #f31b53 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  line-height: 1.4 !important;
+  display: inline-block !important;
+  margin-top: 2px !important;
+  text-shadow: 
+    -1px -1px 0 #ffffff,  
+     1px -1px 0 #ffffff,
+    -1px  1px 0 #ffffff,
+     1px  1px 0 #ffffff !important;
+}
+
+#userlisttoggle {
+  color: #f31b53 !important;
+  margin-right: 6px !important;
+  font-size: 10px !important;
+}
+
+#modflair {
+  font-family: 'Silkscreen', cursive, monospace !important;
+  font-size: 9px !important;
+  font-weight: normal !important;
+  background-color: #f31b53 !important;
+  color: #ffffff !important;
+  border: none !important;
+  padding: 3px 6px !important;
+  text-shadow: none !important;
+}
+
+/* 3. FIX DE NUMEROS FUCSIA Y ETIQUETAS EN PROFILE-BOX */
+#usercount .profile-box {
+  color: #f31b53 !important;
+  font-family: 'Silkscreen', cursive, monospace !important;
+  font-size: 11px !important;
+  text-shadow: none !important;
+}
+
+#usercount .profile-box strong {
+  color: #ffffff !important;
+  font-weight: normal !important;
+}
+
+/* 4. USERLIST */
+#userlist {
+  padding: 2px 4px !important;
+}
+
+#userlist .glyphicon,
+#userlist .profile-box,
+#userlist span[class*="icon"] {
+  display: none !important;
+}
+
+#userlist .userlist_item,
+#userlist li {
+  font-family: 'Boldonse', sans-serif !important;
+  font-size: 11px !important;
+  font-weight: normal !important;
+  font-style: normal !important;
+  margin-bottom: 4px !important;
+  padding: 1px 3px !important;
+  display: block !important;
+  line-height: 1.3 !important;
+  text-shadow: 
+    -1px -1px 0 #ffffff,  
+     0px -1px 0 #ffffff,
+     1px -1px 0 #ffffff,
+    -1px  0px 0 #ffffff,
+     1px  0px 0 #ffffff,
+    -1px  1px 0 #ffffff,
+     0px  1px 0 #ffffff,
+     1px  1px 0 #ffffff,
+     0px  0px 4px #ffffff !important;
+  filter: none !important;
+}
+
+#userlist .userlist_item:hover {
+  background-color: rgba(243, 27, 83, 0.1) !important;
+  border-radius: 3px !important;
+}
+
+/* 4. USERLIST (CON SOMBRA BLANCA EN NICKNAMES) */
+
+#userlist {
+  padding-top: 6px !important;    /* Espacio entre el borde superior y el primer usuario */
+  padding-bottom: 4px !important;
+  padding-left: 4px !important;
+  padding-right: 4px !important;
+}
+
+#userlist .glyphicon,
+#userlist .profile-box,
+#userlist [class*="icon"],
+#userlist span[class*="glyphicon"],
+#userlist .userlist_item > span:first-child:not(.username) {
+  display: none !important;
+}
+
+#userlist .glyphicon,
+#userlist .profile-box,
+#userlist span[class*="icon"] {
+  display: none !important;
+}
+
+#userlist .userlist_item,
+#userlist .userlist_item span,
+#userlist li,
+#userlist li span {
+  font-family: 'Boldonse', sans-serif !important;
+  font-size: 11px !important;
+  font-weight: normal !important;
+  font-style: italic !important;
+  display: block !important;
+  text-shadow: 
+    -1px -1px 0 #ffffff,  
+     0px -1px 0 #ffffff,
+     1px -1px 0 #ffffff,
+    -1px  0px 0 #ffffff,
+     1px  0px 0 #ffffff,
+    -1px  1px 0 #ffffff,
+     0px  1px 0 #ffffff,
+     1px  1px 0 #ffffff,
+     0px  0px 4px #ffffff !important;
+  filter: none !important;
+}
+
+#userlist .userlist_item:hover {
+  background-color: rgba(243, 27, 83, 0.1) !important;
+  border-radius: 3px !important;
+}
