@@ -1,0 +1,769 @@
+/* Importar fuentes: Silkscreen, Bagel Fat One, Shrikhand y Boldonse */
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Boldonse&family=Shrikhand&family=Silkscreen:wght@400;700&display=swap');
+
+/* ===================================================
+   CSS COMPLETO ROCKRITICO (Y2K Moderno + Slate Anulado)
+   Paleta: Blanco #e7e7e7 | Texto #22221a | Fucsia #f31b53 | Verde #c4f85e
+   =================================================== */
+
+/* --- NAVBAR BASE --- */
+body .navbar,
+body .navbar-default,
+body .navbar-inverse {
+  background: rgba(231, 231, 231, 0.95) !important;
+  background-image: none !important;
+  backdrop-filter: blur(8px);
+  border: none !important;
+  border-bottom: 3px solid #f31b53 !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15) !important;
+  z-index: 10000 !important;
+  font-family: 'Boldonse', 'Calibri', sans-serif;
+}
+
+/* Marca / CyTube */
+body .navbar-brand,
+body .navbar-inverse .navbar-brand,
+body .navbar-default .navbar-brand {
+  font-family: 'Shrikhand', cursive !important;
+  color: #22221a !important;
+  font-size: 22px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.5px;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+body .navbar-brand:hover,
+body .navbar-brand:focus {
+  color: #f31b53 !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* Enlaces del Navbar en Estado Reposo */
+body .navbar-nav > li,
+body .navbar-nav > li > a,
+body .navbar-inverse .navbar-nav > li > a,
+body .navbar-default .navbar-nav > li > a {
+  font-family: 'Boldonse', sans-serif !important;
+  color: #22221a !important;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  transition: all 0.2s ease-in-out;
+}
+
+/* --- HOVER FUCSIA Y TEXTO BLANCO --- */
+body .navbar-nav > li:hover,
+body .navbar-nav > li:hover > a,
+body .navbar-nav > li > a:hover,
+body .navbar-nav > li > a:focus,
+body .navbar-inverse .navbar-nav > li:hover,
+body .navbar-inverse .navbar-nav > li:hover > a,
+body .navbar-inverse .navbar-nav > li > a:hover,
+body .navbar-inverse .navbar-nav > li > a:focus,
+body .navbar-default .navbar-nav > li:hover,
+body .navbar-default .navbar-nav > li:hover > a,
+body .navbar-default .navbar-nav > li > a:hover,
+body .navbar-default .navbar-nav > li > a:focus,
+body .navbar-nav > li.open,
+body .navbar-nav > li.open > a,
+body .navbar-nav > li.open > a:hover,
+body .navbar-nav > li.open > a:focus,
+body .navbar-inverse .navbar-nav > .open > a,
+body .navbar-inverse .navbar-nav > .open > a:hover,
+body .navbar-inverse .navbar-nav > .open > a:focus,
+body .navbar-default .navbar-nav > .open > a,
+body .navbar-default .navbar-nav > .open > a:hover,
+body .navbar-default .navbar-nav > .open > a:focus {
+  color: #ffffff !important;
+  background-color: #f31b53 !important;
+  background-image: none !important;
+  border-radius: 6px;
+  box-shadow: none !important;
+}
+
+body .navbar-nav > li:hover > a *,
+body .navbar-nav > li > a:hover *,
+body .navbar-nav > li.open > a * {
+  color: #ffffff !important;
+}
+
+/* Item Activo */
+body .navbar-nav > .active > a,
+body .navbar-nav > .active > a:hover,
+body .navbar-nav > .active > a:focus,
+body .navbar-inverse .navbar-nav > .active > a,
+body .navbar-inverse .navbar-nav > .active > a:hover,
+body .navbar-inverse .navbar-nav > .active > a:focus {
+  background-color: #f31b53 !important;
+  background-image: none !important;
+  color: #ffffff !important;
+  border-radius: 6px;
+}
+
+/* --- BLOQUE DE BIENVENIDA Y REGLAS DEL USERNAME FUCSIA --- */
+#welcome, 
+.navbar-text {
+  font-family: 'Boldonse', sans-serif !important;
+  color: #22221a !important;
+  font-size: 15px;
+}
+
+/* FORZADO MÁXIMO DE COLOR FUCSIA PARA EL NOMBRE */
+#user-fuchsia,
+.user-fuchsia-target,
+#welcome #user,
+#welcome #username,
+.navbar-right #user,
+.navbar-right #username {
+  color: #f31b53 !important;
+  font-weight: bold !important;
+}
+
+/* --- ESTILO PARA "LOG OUT" EN VERDE NENÓN (#c4f85e) CON SOMBRA FUCSIA --- */
+#welcome a[href*="logout"],
+#welcome #logout,
+.navbar-right a[href*="logout"],
+.navbar-right #logout,
+.navbar-text a[href*="logout"],
+a#logoutbtn,
+a[onclick*="logout"] {
+  color: #c4f85e !important;
+  font-weight: bold !important;
+  text-decoration: underline !important;
+  text-shadow: 0px 0px 4px rgba(243, 27, 83, 0.9), 1px 1px 2px #f31b53 !important;
+  margin-left: 6px;
+  transition: all 0.2s ease;
+}
+
+#welcome a[href*="logout"]:hover,
+#welcome #logout:hover,
+.navbar-right a[href*="logout"]:hover,
+.navbar-right #logout:hover,
+.navbar-text a[href*="logout"]:hover,
+a#logoutbtn:hover,
+a[onclick*="logout"]:hover {
+  color: #ffffff !important;
+  text-shadow: 0px 0px 8px #f31b53, 0px 0px 12px #f31b53 !important;
+  text-decoration: underline !important;
+}
+
+/* --- SUBMENÚS DESPLEGABLES (DROPDOWNS) --- */
+.dropdown-menu {
+  background-color: #e7e7e7 !important;
+  background-image: none !important;
+  border: 2px solid #22221a !important;
+  border-radius: 8px !important;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2) !important;
+  padding: 6px 0;
+}
+
+.dropdown-menu > li > a {
+  font-family: 'Boldonse', sans-serif !important;
+  color: #22221a !important;
+  padding: 8px 16px;
+  background-image: none !important;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  background-color: #f31b53 !important;
+  background-image: none !important;
+  color: #ffffff !important;
+}
+
+/* Botón colapsable para móviles */
+.navbar-toggle {
+  border: 2px solid #22221a !important;
+  background-color: #f31b53 !important;
+  background-image: none !important;
+}
+
+.navbar-toggle .icon-bar {
+  background-color: #ffffff !important;
+}
+
+/* --- MARQUEE INICIAL Y2K --- */
+#rockritico-marquee-wrap {
+  width: 100%;
+  background-color: #e7e7e7;
+  color: #22221a;
+  border-top: 3px solid #22221a;
+  border-bottom: 4px solid #f31b53;
+  box-shadow: 0 4px 15px rgba(243, 27, 83, 0.35);
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 12px 0;
+  font-family: 'Calibri', 'Segoe UI', sans-serif;
+  font-weight: bold;
+  font-size: 17px;
+  position: relative;
+  z-index: 10;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.marquee-content {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%;
+  animation: rockritico-scroll 18s linear infinite;
+}
+
+#rockritico-marquee-wrap:hover .marquee-content {
+  animation-play-state: paused;
+}
+
+.marquee-item {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.marquee-welcome {
+  font-family: 'Shrikhand', cursive;
+  font-weight: 400;
+  font-size: 25px;
+  color: #22221a;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+  transform: translateY(1px);
+}
+
+.marquee-logo {
+  height: 36px;
+  width: auto;
+  margin: 0 12px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.now-playing-label {
+  font-family: "Bagel Fat One", system-ui, cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: #ffffff;
+  background-color: #f31b53;
+  padding: 6px 18px 6px 18px;
+  border-radius: 8px;
+  margin-right: 14px;
+  margin-left: 18px;
+  font-size: 22px;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.marquee-song-title {
+  font-family: 'Silkscreen', cursive, sans-serif;
+  color: #22221a;
+  font-size: 22px;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+  transform: translateY(0px);
+}
+
+@keyframes rockritico-scroll {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* --- ESTILOS GENERALES Y LAYOUT --- */
+body {
+  color: #22221a;
+  font-family: "Georgia", sans-serif;
+}
+
+#mainpage {
+  background-image: url("https://cdn.amebaowndme.com/madrid-prd/madrid-web/images/sites/106798/c7ccb34e2b251591d3e53768a9a301c5_5dea0f12c18fee5617b0e824e4eeb258.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#leftpane {
+  margin: 5px;
+  float: left;
+  background: rgba(231, 231, 231, 0.85);
+  border: 2px solid #f31b53;
+  border-radius: 10px;
+  backdrop-filter: blur(4px);
+}
+
+#rightpane {
+  margin: 5px;
+  float: right;
+  background: rgba(231, 231, 231, 0.85);
+  border: 2px solid #f31b53;
+  border-radius: 10px;
+  width: 55%;
+  backdrop-filter: blur(4px);
+}
+
+/* --- TITULARES Y TEXTO --- */
+h1, h2 {
+  text-align: center;
+  color: #22221a;
+  text-shadow: 0 0 5px #fff, 0 0 10px #f31b53, 0 0 20px #f31b53;
+  letter-spacing: 3px;
+  font-family: 'Calibri', sans-serif;
+  font-weight: bold;
+}
+
+h1 { font-size: 38px; }
+h2 { font-size: 22px; }
+
+h3 {
+  color: #22221a;
+  font-family: "Georgia", serif;
+  border-bottom: 2px solid #f31b53;
+}
+
+h4, p, .poll-menu, .qe_time, .option, th, td, label, strong {
+  color: #22221a;
+}
+
+#motdwrap {
+  background-color: #e7e7e7;
+  border: 1px solid #f31b53;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+#currenttitle {
+  color: #22221a;
+  text-shadow: 1px 1px 0px #fff, 2px 2px 0px #f31b53;
+  font: bold 18px 'Calibri', sans-serif;
+  padding-bottom: 10px;
+}
+
+/* --- CHAT Y MENSAJES --- */
+#messagebuffer {
+  color: #22221a;
+  font-family: "Georgia", serif;
+  background-color: rgba(231, 231, 231, 0.9) !important;
+  border: 1px solid #22221a;
+  border-radius: 6px 6px 0 0;
+}
+
+#chatline {
+  background-color: #ffffff !important;
+  color: #22221a !important;
+  border: 2px solid #f31b53 !important;
+  border-radius: 0 0 6px 6px !important;
+  font-weight: bold;
+}
+
+.username {
+  color: #f31b53 !important;
+}
+
+.nick-hover {
+  background-color: transparent;
+}
+
+.nick-highlight {
+  background-color: rgba(243, 27, 83, 0.25);
+}
+
+.server-whisper {
+  color: #555555;
+}
+
+.userlist_owner {
+  font-size: 14px;
+  font-weight: bold;
+  color: #f31b53 !important;
+  text-shadow: 0px 0px 8px rgba(243, 27, 83, 0.6);
+}
+
+#userlist_guest {
+  color: #777777 !important;
+}
+
+/* --- PLAYLIST Y LIBRERÍA --- */
+#queue > queue_entry {
+  padding: 10%;
+}
+
+#library {
+  height: 200px;
+}
+
+#library > .queue_entry {
+  width: 33%;
+  float: left;
+  height: 200px;
+  padding: 2%;
+  text-align: center;
+}
+
+#library > .queue_entry > img {
+  clear: both;
+}
+
+#library > .queue_entry > .qe_time {
+  clear: right;
+  position: relative;
+  border-bottom: 5px;
+}
+
+#logoutform #logout,
+input#logout.navbar-link {
+  background: transparent !important;
+  border: none !important;
+  padding: 3px 4px 5px 2px !important; /* Extra de espacio abajo para la 'g' y la sombra */
+  margin: -4px 0 -2px 0 !important;   /* Neutraliza el espacio extra para no estirar la navbar */
+  font-family: inherit !important;
+  font-size: 14px !important;
+  color: #c4f85e !important;
+  font-weight: bold !important;
+  text-decoration: none !important;
+  text-shadow: 0px 0px 4px rgba(243, 27, 83, 0.9), 1px 1px 2px #f31b53 !important;
+  cursor: pointer !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  line-height: 1.2 !important;       /* Da margen de altura a los caracteres descendentes */
+  vertical-align: baseline !important;
+  overflow: visible !important;
+  box-sizing: content-box !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  transition: all 0.2s ease !important;
+}
+
+#logoutform #logout:hover,
+input#logout.navbar-link:hover {
+  color: #ffffff !important;
+  text-shadow: 0px 0px 1px #f31b53, 0px 0px 2px #f31b53 !important;
+  text-decoration: none !important;
+}
+
+/* ===================================================
+   AJUSTES PANEL CANAL Y MODALES (ROCKRITICO - EDICIÓN FINAL)
+   =================================================== */
+
+/* Separación superior para no tapar la navbar */
+.modal-dialog {
+  margin-top: 60px !important;
+}
+
+/* Modal translúcido con efecto Blur */
+.modal-content,
+#channeloptions {
+  background: rgba(231, 231, 231, 0.90) !important;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: #22221a !important;
+  border: 2px solid #22221a !important;
+  border-radius: 10px !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35) !important;
+}
+
+/* Cabecera y cuerpo sin bordes duplicados */
+.modal-header {
+  padding: 10px 15px 4px 15px !important;
+  border-bottom: none !important;
+}
+
+.modal-body {
+  padding: 15px 20px !important;
+}
+
+.modal-footer {
+  padding: 10px 15px !important;
+  border-top: 1px solid #22221a !important;
+  margin-top: 10px !important;
+}
+
+/* Instructions and descriptions (MOTD/CSS) */
+#cs-css-doc,
+#cs-motd-doc,
+.modal-body p {
+  font-family: 'Segoe UI', 'Calibri', sans-serif !important;
+  font-weight: bold !important;
+  color: #f31b53 !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+  margin-top: 6px !important;
+  margin-bottom: 12px !important;
+}
+
+
+/* --- FILAS DE OPCIONES Y CHECKBOXES --- */
+.form-horizontal .form-group {
+  margin-top: 2px !important;
+  margin-bottom: 4px !important;
+}
+
+.form-horizontal .form-group:has(.checkbox),
+.form-group .checkbox {
+  margin-top: 0px !important;
+  margin-bottom: 2px !important;
+  padding-top: 0px !important;
+}
+
+.modal-body label,
+#channeloptions label,
+.form-horizontal .control-label {
+  font-family: 'Segoe UI', 'Calibri', sans-serif !important;
+  font-weight: bold !important;
+  color: #f31b53 !important;
+  font-size: 13px !important;
+  line-height: 1.2 !important;
+  padding-top: 4px !important;
+}
+
+.checkbox label {
+  font-family: 'Segoe UI', 'Calibri', sans-serif !important;
+  font-weight: bold !important;
+  color: #f31b53 !important;
+  font-size: 13.5px !important;
+}
+
+.help-block,
+.modal-body .text-muted {
+  font-family: 'Georgia', serif !important;
+  color: #2b7a9e !important;
+  font-size: 12px !important;
+  margin-top: 2px !important;
+  margin-bottom: 6px !important;
+}
+
+/* --- EDITORES Y CAJAS DE TEXTO --- */
+.modal-content textarea,
+#cs-css-text,
+#cs-motd-text {
+  margin-top: 8px !important;
+  margin-bottom: 12px !important;
+  background-color: #121318 !important;
+  color: #ffffff !important;
+  border: 1.5px solid #22221a !important;
+  border-radius: 6px !important;
+  padding: 8px !important;
+  font-family: monospace !important;
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="number"],
+.modal-content select,
+#channeloptions input[type="text"],
+#channeloptions select {
+  background-color: #121318 !important;
+  color: #ffffff !important;
+  border: 1px solid #22221a !important;
+  border-radius: 4px !important;
+  font-family: monospace, sans-serif !important;
+  font-size: 12px !important;
+  padding: 2px 6px !important;
+  height: 26px !important;
+}
+
+/* --- BOTONES --- */
+.modal-content .btn,
+.modal-content .btn-default,
+.modal-content .btn-primary,
+#channeloptions .btn,
+#cs-css-submit,
+#cs-motd-submit {
+  background-color: #f31b53 !important;
+  background-image: none !important;
+  color: #ffffff !important;
+  border: 1.5px solid #22221a !important;
+  border-radius: 5px !important;
+  font-family: 'Boldonse', sans-serif !important;
+  font-size: 12px !important;
+  padding: 5px 14px !important;
+  text-shadow: none !important;
+  box-shadow: 2px 2px 0px #22221a !important;
+  transition: all 0.2s ease !important;
+}
+
+.modal-content .btn:hover,
+.modal-content .btn-default:hover,
+.modal-content .btn-primary:hover,
+#channeloptions .btn:hover,
+#cs-css-submit:hover,
+#cs-motd-submit:hover {
+  background-color: #c4f85e !important;
+  color: #22221a !important;
+  box-shadow: 2px 2px 0px #22221a !important;
+}
+
+/* --- MENÚS DESPLEGABLES (DROPDOWNS) --- */
+.dropdown-menu > li > a {
+  font-family: 'Boldonse', sans-serif !important;
+  font-size: 12px !important;
+  padding: 5px 12px !important;
+}
+
+.dropdown-menu > li.active > a,
+.dropdown-menu > li.active > a:hover,
+.dropdown-menu > li.active > a:focus,
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus,
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  background-color: #f31b53 !important;
+  background-image: none !important;
+  color: #ffffff !important;
+}
+
+/* --- CABECERA Y PESTAÑAS (LÍNEA FUCSIA CONTINUA BAJO TABS) --- */
+.modal-header {
+  padding: 10px 15px 4px 15px !important;
+  border-bottom: none !important;
+}
+
+/* La línea fucsia de lado a lado estará AQUÍ, pegada a la base de las tabs */
+.nav-tabs {
+  border-bottom: 2px solid #f31b53 !important;
+  margin-bottom: 12px !important;
+}
+
+.nav-tabs > li > a {
+  font-family: 'Boldonse', sans-serif !important;
+  color: #22221a !important;
+  font-size: 13px !important;
+  padding: 5px 12px !important;
+  background-color: transparent !important;
+  border: 1px solid transparent !important;
+  transition: all 0.2s ease !important;
+}
+
+/* Hover y Focus fucsia */
+.nav-tabs > li > a:hover,
+.nav-tabs > li > a:focus {
+  background-color: #f31b53 !important;
+  background-image: none !important;
+  color: #ffffff !important;
+  border-color: #22221a !important;
+  border-radius: 5px 5px 0 0 !important;
+}
+
+/* Tab activa / seleccionada */
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.open > a,
+.nav-tabs > li.open > a:hover,
+.nav-tabs > li.open > a:focus {
+  background-color: #f31b53 !important;
+  background-image: none !important;
+  color: #ffffff !important;
+  border: 1px solid #22221a !important;
+  border-bottom-color: #f31b53 !important; /* Se fusiona limpiamente con la línea de la base */
+  border-radius: 5px 5px 0 0 !important;
+}
+
+/* Títulos internos dentro de cada pestaña (se elimina su borde inferior para no duplicar) */
+#channeloptions h3,
+#channeloptions legend,
+.modal-body h4 {
+  font-family: 'Shrikhand', cursive !important;
+  color: #f31b53 !important;
+  font-size: 16px !important;
+  border-bottom: none !important;
+  padding-bottom: 0px !important;
+  margin-top: 6px !important;
+  margin-bottom: 10px !important;
+}
+
+/* ===================================================
+   ESTILOS PARA TABLAS (CHAT FILTERS, BAN LIST, ETC.)
+   =================================================== */
+
+/* Contenedor y fondo de la tabla */
+.modal-body .table,
+#channeloptions .table {
+  background-color: rgba(255, 255, 255, 0.4) !important;
+  border: 1.5px solid #22221a !important;
+  border-radius: 6px !important;
+  margin-top: 10px !important;
+  color: #22221a !important;
+}
+
+/* Encabezados de la tabla (Control, Name, Active) */
+.modal-body .table th,
+#channeloptions .table th {
+  font-family: 'Boldonse', sans-serif !important;
+  color: #f31b53 !important;
+  font-size: 13px !important;
+  border-bottom: 2px solid #22221a !important;
+  background-color: rgba(231, 231, 231, 0.8) !important;
+  padding: 8px !important;
+}
+
+/* Celdas de la tabla */
+.modal-body .table td,
+#channeloptions .table td {
+  border-top: 1px solid rgba(34, 34, 26, 0.15) !important;
+  vertical-align: middle !important;
+  padding: 6px 8px !important;
+  font-family: 'Segoe UI', 'Calibri', sans-serif !important;
+  font-size: 13px !important;
+  color: #22221a !important;
+}
+
+/* Filas alternas (Sobrescribe el tono oscuro por defecto de .table-striped) */
+.modal-body .table-striped > tbody > tr:nth-of-type(odd),
+#channeloptions .table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: rgba(243, 27, 83, 0.05) !important;
+}
+
+.modal-body .table-striped > tbody > tr:nth-of-type(even),
+#channeloptions .table-striped > tbody > tr:nth-of-type(even) {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Hover en las filas */
+.modal-body .table > tbody > tr:hover,
+#channeloptions .table > tbody > tr:hover {
+  background-color: rgba(243, 27, 83, 0.12) !important;
+}
+
+/* Estilo para las etiquetas de código <code> dentro de las tablas */
+.modal-body .table code,
+#channeloptions .table code {
+  background-color: #121318 !important;
+  color: #c4f85e !important; /* Verde neón para resaltar los comandos/nombres */
+  border: 1px solid #22221a !important;
+  border-radius: 4px !important;
+  padding: 2px 6px !important;
+  font-family: monospace !important;
+  font-size: 12px !important;
+}
+
+/* Botones de acción dentro de la tabla (Edit, Trash) */
+.modal-body .table .btn-group .btn,
+#channeloptions .table .btn-group .btn {
+  box-shadow: 1px 1px 0px #22221a !important;
+  padding: 2px 6px !important;
+  font-size: 11px !important;
+}
+
+/* Botón de borrar (Trash) dentro de tablas */
+.modal-body .table .btn-danger,
+#channeloptions .table .btn-danger {
+  background-color: #22221a !important;
+  border-color: #22221a !important;
+  color: #ffffff !important;
+}
+
+.modal-body .table .btn-danger:hover,
+#channeloptions .table .btn-danger:hover {
+  background-color: #f31b53 !important;
+  border-color: #22221a !important;
+  color: #ffffff !important;
+}
