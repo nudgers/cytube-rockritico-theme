@@ -1,5 +1,5 @@
 /* Importar fuentes: Silkscreen, Bagel Fat One, Shrikhand y Boldonse */
-@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Boldonse&family=Oregano:ital@0;1&family=Pixelify+Sans&family=Shrikhand&family=Silkscreen:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Boldonse&&family=Diphylleia&family=Oregano:ital@0;1&family=Pixelify+Sans&family=Shrikhand&family=Silkscreen:wght@400;700&display=swap');
 /* ===================================================
    CSS COMPLETO ROCKRITICO (Y2K Moderno + Slate Anulado)
    Paleta: Blanco #e7e7e7 | Texto #22221a | Fucsia #f31b53 | Verde #c4f85e
@@ -1568,4 +1568,630 @@ input#logout.navbar-link:hover {
 #userlist .userlist_item:hover {
   background-color: rgba(243, 27, 83, 0.1) !important;
   border-radius: 3px !important;
+}
+
+/* ===================================================
+   MENÚ DESPLEGABLE DE USUARIO (.user-dropdown)
+   =================================================== */
+
+/* Contenedor principal del desplegable */
+.user-dropdown {
+  background-color: #121318 !important;
+  border: 2px solid #22221a !important;
+  border-radius: 6px !important;
+  padding: 8px !important;
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Nombre de usuario del header en la tarjeta */
+.user-dropdown strong {
+  font-family: 'Pixelify Sans', sans-serif !important;
+  font-size: 13px !important;
+  color: #f31b53 !important;
+  text-shadow: none !important;
+  display: block !important;
+  text-align: center !important;
+  margin-bottom: 6px !important;
+}
+
+/* Botones de acción */
+.user-dropdown .btn-group-vertical .btn {
+  font-family: 'Pixelify Sans', sans-serif !important;
+  font-size: 11px !important;
+  font-weight: normal !important;
+  color: #ffffff !important;
+  background-color: #22221a !important;
+  border: 1px solid #333333 !important;
+  border-radius: 3px !important;
+  padding: 3px 8px !important;
+  margin-bottom: 2px !important;
+  text-shadow: none !important;
+  transition: all 0.1s ease !important;
+}
+
+/* Hover en los botones */
+.user-dropdown .btn-group-vertical .btn:hover {
+  background-color: #f31b53 !important;
+  color: #ffffff !important;
+  border-color: #f31b53 !important;
+}
+
+/* ===================================================
+   FORMULARIO DE LOGIN (#loginform)
+   =================================================== */
+
+#loginform .form-control::placeholder {
+  color: #888888 !important;
+}
+
+/* Checkbox y texto "Remember me" */
+#loginform .checkbox {
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+#loginform .checkbox label,
+#loginform .navbar-text-nofloat {
+  color: #f31b53 !important;
+  margin: 4px !important;
+  font-family: 'Silkscreen', cursive, monospace !important;
+  font-size: 10px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+  cursor: pointer !important;
+}
+
+#loginform .checkbox input[type="checkbox"] {
+  margin: 0 !important;
+  accent-color: #f31b53 !important; /* Pinta el check en fucsia */
+}
+
+/* Botón de Login */
+#loginform #login,
+#loginform button#login,
+#loginform .btn,
+#loginform .btn-default {
+  background-image: none !important; /* Quita el degradado nativo de Bootstrap */
+  background-color: #f31b53 !important; /* Fondo fucsia real */
+  color: #ffffff !important;
+  font-family: 'Boldonse', sans-serif !important;
+  font-size: 11px !important;
+  font-weight: normal !important;
+  border: 1.5px solid #22221a !important;
+  border-radius: 4px !important;
+  height: 28px !important;
+  padding: 0 12px !important;
+  box-shadow: 2px 2px 0px #22221a !important;
+  text-shadow: none !important;
+  line-height: 1 !important;
+  transition: all 0.15s ease !important;
+}
+
+#loginform #login:hover,
+#loginform button#login:hover,
+#loginform .btn:hover,
+#loginform .btn-default:hover {
+  background-image: none !important;
+  background-color: #a8e028 !important; /* Hover verde neón */
+  color: #22221a !important;
+  cursor: pointer !important;
+}
+
+/* ===================================================
+   GUEST LOGIN (#guestlogin) - SILKSCREEN + OCULTAMIENTO NATIVO
+   =================================================== */
+
+/* Ajuste de altura del contenedor sin forzar el display */
+#guestlogin {
+  height: 28px !important;
+}
+
+/* Etiqueta / Botón "Guest login" en Fucsia y Silkscreen */
+#guestlogin .input-group-addon {
+  background-image: none !important;
+  background-color: #f31b53 !important;
+  color: #ffffff !important;
+  font-family: 'Silkscreen', cursive, monospace !important;
+  font-size: 10px !important;
+  font-weight: normal !important;
+  border: 1.5px solid #22221a !important;
+  border-right: none !important;
+  border-top-left-radius: 4px !important;
+  border-bottom-left-radius: 4px !important;
+  padding: 0 10px !important;
+  text-shadow: none !important;
+  height: 28px !important;
+  line-height: 26px !important;
+  box-sizing: border-box !important;
+}
+
+/* Input donde escribes el nombre: Texto y Placeholder en Silkscreen */
+#guestlogin #guestname {
+  background-color: #121318 !important;
+  color: #c4f85e !important;
+  font-family: 'Silkscreen', cursive, monospace !important;
+  font-size: 10px !important;
+  border: 1.5px solid #22221a !important;
+  border-top-right-radius: 4px !important;
+  border-bottom-right-radius: 4px !important;
+  height: 28px !important;
+  padding: 0 8px !important;
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.5) !important;
+  box-sizing: border-box !important;
+}
+
+#guestlogin #guestname::placeholder {
+  color: #777777 !important;
+  font-family: 'Silkscreen', cursive, monospace !important;
+  font-size: 10px !important;
+}
+
+#guestlogin #guestname:focus {
+  border-color: #f31b53 !important;
+  outline: none !important;
+}
+
+#videowrap-header {
+  padding-bottom: 5px !important;
+}
+
+
+/* ===================================================
+   BOTONES DE CONTROL DE PLAYLIST Y VIDEO (#rightcontrols)
+   =================================================== */
+
+#controlsrow {
+   margin-bottom: 10px;
+}
+
+#videowrap {
+   margin-bottom: 0px !important;
+}
+
+/* ===================================================
+   TÍTULOS DE POLLWRAP CON TIPOGRAFÍA SHRIKHAND
+   =================================================== */
+
+#pollwrap strong,
+#pollwrap .well strong {
+  font-family: 'Shrikhand', cursive !important;
+  font-size: 14px !important;
+  font-weight: normal !important;
+  color: #f31b53 !important; /* Fucsia Y2K */
+  letter-spacing: 0.5px !important;
+  text-shadow: 1px 1px 0px #22221a !important; /* Sombra oscura neobrutalista */
+  display: block !important;
+  margin-top: 12px !important;
+  margin-bottom: 4px !important;
+}
+
+
+/* Seleccionamos todos los botones dentro de #rightcontrols excepto #qlockbtn */
+#rightcontrols .btn:not(#qlockbtn) {
+  background-image: none !important;
+  background-color: #f31b53 !important; /* Fondo fucsia */
+  color: #ffffff !important;
+  border: 1.5px solid #22221a !important;
+  box-shadow: 1.5px 1.5px 0px #22221a !important;
+  text-shadow: none !important;
+  transition: all 0.15s ease !important;
+  margin: 0px 0px  !important;
+}
+
+/* Efecto hover en los botones fucsias */
+#rightcontrols .btn:not(#qlockbtn):hover,
+#rightcontrols .btn:not(#qlockbtn):focus {
+  background-image: none !important;
+  background-color: #a8e028 !important; /* Verde neón al pasar el cursor */
+  color: #22221a !important;
+  border-color: #22221a !important;
+}
+
+/* El botón de Lock (#qlockbtn) mantiene su estructura pero añade borde Y2K sin perder el color de peligro */
+#qlockbtn {
+  border: 1.5px solid #22221a !important;
+  box-shadow: 1.5px 1.5px 0px #22221a !important;
+}
+
+/* ===================================================
+   BOTONES DE IZQUIERDA (#leftcontrols) - ESTILO Y2K
+   =================================================== */
+
+#leftcontrols .btn,
+#leftcontrols #newpollbtn,
+#leftcontrols #emotelistbtn {
+  background-image: none !important;
+  background-color: #f31b53 !important; /* Fondo fucsia */
+  color: #ffffff !important;
+  font-family: 'Boldonse', sans-serif !important;
+  font-size: 11px !important;
+  font-weight: normal !important;
+  border: 1.5px solid #22221a !important;
+  border-radius: 4px !important;
+  height: 28px !important;
+  padding: 0 12px !important;
+  box-shadow: 2px 2px 0px #22221a !important;
+  text-shadow: none !important;
+  line-height: 1 !important;
+  transition: all 0.15s ease !important;
+}
+
+#leftcontrols .btn:hover,
+#leftcontrols #newpollbtn:hover,
+#leftcontrols #emotelistbtn:hover {
+  background-image: none !important;
+  background-color: #a8e028 !important; /* Hover verde neón */
+  color: #22221a !important;
+  cursor: pointer !important;
+}
+
+/* ===================================================
+   ALINEACIÓN DEFINITIVA CSS EXPERT (#chatwrap == #videowrap)
+   =================================================== */
+
+/* 0. Anula el clearfix de Bootstrap (.row:before/:after): en cuanto
+   #main pasa a display:flex, esos pseudo-elementos se cuelan como
+   dos flex-items más y rompen el align-items: stretch de abajo */
+#main:before,
+#main:after {
+  content: none !important;
+  display: none !important;
+}
+
+/* 1. Igualar alturas de las dos columnas principales mediante Flexbox */
+#main {
+  display: flex !important;
+  align-items: stretch !important;
+  min-height: 60vh !important;
+}
+
+/* 2. Forzamos el estirado en ambas columnas, y el padding-bottom que
+   ya comprobaste que iguala el alto total (chatwrap 0, videowrap 10) */
+#chatwrap,
+#videowrap {
+  align-self: stretch !important;
+  height: auto !important;
+  box-sizing: border-box !important;
+  min-width: 0 !important;
+}
+
+#chatwrap {
+  padding-bottom: 0px !important;
+}
+
+#videowrap {
+  padding-bottom: 10px !important;
+}
+
+/* 3. #chatwrap pasa a ser un grid: fila 1 = cabecera, fila 2 = contenido
+   (userlist + mensajes lado a lado, misma altura SIEMPRE), fila 3 = input.
+   Se acabó adivinar "bottom: 34px" cada vez que cambia el alto del input. */
+#chatwrap {
+  display: grid !important;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 120px 1fr;
+  min-height: 0 !important;
+  position: relative !important;
+}
+
+#chatheader {
+  grid-row: 1 !important;
+  grid-column: 1 / -1 !important;
+}
+
+/* 4. userlist ya no va en position:absolute: ocupa su celda del grid */
+#userlist {
+  position: static !important;
+  grid-row: 2 !important;
+  grid-column: 1 !important;
+  width: auto !important;
+  max-height: none !important;
+  overflow-y: auto !important;
+  z-index: 10 !important;
+}
+
+/* Si el botón de toggle oculta la userlist (display:none inline), colapsa
+   también su columna para que los mensajes ocupen todo el ancho.
+   Requiere :has() (Chrome/Edge/Safari y Firefox 121+); en un navegador
+   más viejo simplemente se queda la columna vacía de 120px, sin romper nada. */
+#chatwrap:has(#userlist[style*="display: none"]) {
+  grid-template-columns: 0 1fr;
+}
+
+/* 5. El buffer de mensajes: misma fila que userlist, columna de al lado */
+#messagebuffer {
+  grid-row: 2 !important;
+  grid-column: 2 !important;
+  overflow-y: auto !important;
+  min-height: 100px !important;
+  margin-left: 0 !important;
+}
+
+/* 6. El input (chatline o guestlogin, según logueado/invitado) ocupa
+   toda la fila de abajo */
+#chatline,
+#guestlogin,
+#chatwrap form {
+  grid-row: 3 !important;
+  grid-column: 1 / -1 !important;
+}
+
+#videowrap {
+  display: flex !important;
+  flex-direction: column !important;
+  min-height: 0 !important;
+}
+
+#videowrap-header {
+  flex: 0 0 auto !important;
+}
+
+#videowrap .embed-responsive.embed-responsive-16by9 {
+  flex: 1 1 auto !important;
+  height: 0 !important;
+  padding-bottom: 0 !important; /* anula el hack de aspect-ratio por ancho */
+}
+
+#leftpane,
+#chatwrap {
+  width: 41.66666667% !important;
+  padding-right: 50px;
+}
+
+#rightpane,
+#videowrap {
+  width: 58.33333333% !important;
+}
+
+/* ===================================================
+   TÍTULO DEL REPRODUCTOR (#currenttitle) - Y2K
+   =================================================== */
+#videowrap-header {
+  padding-bottom: 0px important!;
+}
+
+#currenttitle {
+  font-family: 'Silkscreen', cursive, monospace !important;
+  font-size: 14px !important;
+  color: #f31b53 !important; /* Texto fucsia */
+  font-weight: normal !important;
+  margin-top: 8px;
+  margin-left: 8px;
+  padding-bottom: 0px important!;
+  text-shadow: 
+    -1px -1px 0 #ffffff,
+     1px -1px 0 #ffffff,
+    -1px  1px 0 #ffffff,
+     1px  1px 0 #ffffff !important; /* Borde/Sombra blanca densa */
+}
+
+/* ===================================================
+   IGUALAR ESTRUCTURA EXACTA DE LEFTPANE Y CHATWRAP
+   =================================================== */
+
+/* ===================================================
+   AJUSTE DE ANCHO DE LEFTPANE (SIN TOCAR CHATWRAP)
+   =================================================== */
+
+#leftpane {
+  /* Restamos los 50px de padding sobrantes del ancho total de la columna */
+  width: calc(41.66666667% - 65px) !important;
+  
+  /* Eliminamos el padding derecho que ensanchaba el contenedor */
+  padding-right: 10px !important; 
+  
+  /* Respetamos su posición y margen exterior */
+  margin-left: 15px !important;
+  margin-right: 50px !important;
+  box-sizing: border-box !important;
+}
+
+/* El contenido interno se adapta al nuevo ancho exacto */
+#leftpane-inner {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* ===================================================
+   ESTILO Y2K/NEOBRUTALISTA PARA POLLWRAP (.well)
+   =================================================== */
+
+/* 1. Tipografía base Diphylleia para textos, instrucciones y checkboxes */
+#pollwrap,
+#pollwrap .well,
+#pollwrap strong,
+#pollwrap p,
+#pollwrap label,
+#pollwrap .text-muted {
+  font-family: 'Diphylleia', serif !important;
+  color: #22221a !important;
+  font-size: 13px !important;
+}
+
+#pollwrap strong {
+  font-weight: bold !important;
+  display: block !important;
+  margin-top: 10px !important;
+  margin-bottom: 4px !important;
+}
+
+#pollwrap p.text-muted {
+  font-size: 11px !important;
+  line-height: 1.3 !important;
+  opacity: 0.85 !important;
+}
+
+/* 2. Checkboxes estilizados */
+#pollwrap .checkbox label {
+  font-family: 'Diphylleia', serif !important;
+  cursor: pointer !important;
+  user-select: none !important;
+}
+
+#pollwrap .checkbox input[type="checkbox"] {
+  accent-color: #f31b53 !important; /* Selector fucsia Y2K */
+  margin-right: 6px !important;
+}
+
+/* 3. Inputs de texto dentro de la encuesta */
+#pollwrap input.form-control {
+  font-family: 'Silkscreen', cursive, monospace !important;
+  font-size: 11px !important;
+  background-color: #ffffff !important;
+  color: #22221a !important;
+  border: 1.5px solid #22221a !important;
+  border-radius: 4px !important;
+  box-shadow: inset 1px 1px 2px rgba(0,0,0,0.15) !important;
+  margin-bottom: 8px !important;
+}
+
+#pollwrap input.form-control:focus {
+  border-color: #f31b53 !important;
+  outline: none !important;
+}
+
+/* 4. Botones estándar (Add Option, Open Poll) */
+#pollwrap .btn {
+  background-image: none !important;
+  background-color: #f31b53 !important;
+  color: #ffffff !important;
+  font-family: 'Boldonse', sans-serif !important;
+  font-size: 11px !important;
+  font-weight: normal !important;
+  border: 1.5px solid #22221a !important;
+  border-radius: 4px !important;
+  box-shadow: 2px 2px 0px #22221a !important;
+  text-shadow: none !important;
+  line-height: 1.2 !important;
+  margin-top: 6px !important;
+  transition: all 0.15s ease !important;
+}
+
+#pollwrap .btn:hover {
+  background-color: #a8e028 !important; /* Hover verde neón */
+  color: #22221a !important;
+  cursor: pointer !important;
+}
+
+/* 5. Botón de Cancelar (Acento oscuro/diferenciado) */
+#pollwrap .btn-danger {
+  background-color: #22221a !important;
+  color: #ffffff !important;
+  border-color: #f31b53 !important;
+}
+
+#pollwrap .btn-danger:hover {
+  background-color: #f31b53 !important;
+  color: #ffffff !important;
+}
+
+/* ===================================================
+   FIX DE CONTRASTE Y FONDO PARA POLLWRAP (.well)
+   =================================================== */
+
+/* 1. Fondo claro e hiper-visible para la caja principal */
+#pollwrap .well {
+  background-color: rgba(255, 255, 255, 0.9) !important; /* Fondo blanco semi-transparente */
+  border: 2px solid #22221a !important; /* Borde oscuro neobrutalista */
+  border-radius: 8px !important;
+  box-shadow: 3px 3px 0px #f31b53 !important; /* Sombra fucsia */
+  padding: 15px !important;
+}
+
+/* 2. Forzar texto negro legible para todas las instrucciones y etiquetas */
+#pollwrap,
+#pollwrap .well,
+#pollwrap strong,
+#pollwrap p,
+#pollwrap label,
+#pollwrap .text-muted,
+#pollwrap .checkbox label {
+  color: #22221a !important; /* Negro de alto contraste */
+  font-family: 'Diphylleia', serif !important;
+  text-shadow: none !important;
+}
+
+/* 3. Aclarar el texto de ayuda secundario sin perder legibilidad */
+#pollwrap p.text-muted {
+  color: #44443c !important;
+  font-size: 11px !important;
+  line-height: 1.3 !important;
+}
+
+/* ===================================================
+   BOTÓN CANCELAR (#pollwrap .btn-danger) - ESTILO FUCSIA
+   =================================================== */
+
+#pollwrap .btn-danger {
+  background-image: none !important;
+  background-color: #f31b53 !important; /* Fondo fucsia Y2K */
+  color: #ffffff !important;
+  font-family: 'Boldonse', sans-serif !important;
+  font-size: 11px !important;
+  font-weight: normal !important;
+  border: 1.5px solid #22221a !important;
+  border-radius: 4px !important;
+  box-shadow: 2px 2px 0px #22221a !important;
+  text-shadow: none !important;
+  line-height: 1.2 !important;
+  transition: all 0.15s ease !important;
+}
+
+#pollwrap .btn-danger:hover {
+  background-image: none !important;
+  background-color: #a8e028 !important; /* Hover verde neón */
+  color: #22221a !important;
+  cursor: pointer !important;
+}
+
+/* ===================================================
+   BLOQUEO DE BUCLE DE ZOOM (CONTENCIÓN DE TAMAÑO)
+   =================================================== */
+
+/* 1. Bloquea que el chatwrap crezca infinitamente con los recálculos del navegador */
+#chatwrap {
+  display: grid !important;
+  grid-template-rows: auto 1fr auto !important;
+  grid-template-columns: 120px 1fr !important;
+  min-height: 0 !important; /* Esencial para cortar la expansión en flex/grid */
+  position: relative !important;
+}
+
+/* 2. Ignora la altura en píxeles fijos que CyTube inyecta por JS (height: 783px inline) */
+#messagebuffer,
+#userlist {
+  height: 100% !important; /* Anula el height en px que mete CyTube por JS al cambiar zoom */
+  min-height: 0 !important;
+  max-height: 100% !important;
+  overflow-y: auto !important;
+}
+
+/* ===================================================
+   ALINEACIÓN DE ANCHO (#videowrap == #rightpane)
+   =================================================== */
+
+#rightpane {
+  /* Restamos la compensación para que la caja exterior mida exacto lo mismo que #videowrap */
+  width: calc(58.33333333% - 30px) !important;
+  
+  /* Ajuste de rellenos interiores y márgenes de la columna derecha */
+  padding-right: 10px !important;
+  margin-left: 15px !important;
+  margin-right: 15px !important;
+  box-sizing: border-box !important;
+}
+
+/* Forzar que el contenido interno (playlist, controles) aproveche el 100% de la caja */
+#rightpane-inner,
+#rightpane .well,
+#queue {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  box-sizing: border-box !important;
 }
