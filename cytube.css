@@ -2195,3 +2195,636 @@ input#logout.navbar-link:hover {
   margin-right: 0 !important;
   box-sizing: border-box !important;
 }
+
+/* ===================================================
+   TARJETAS Y2K EN GRID (3 POR FILA) - FIX ESTRUCTURAL
+   =================================================== */
+
+/* 1. Input de búsqueda en Diphylleia */
+#searchcontrol #library_query {
+  font-family: 'Diphylleia', serif !important;
+  font-size: 13px !important;
+  background-color: #ffffff !important;
+  color: #22221a !important;
+  border: 1.5px solid #22221a !important;
+  height: 32px !important;
+}
+
+#searchcontrol .checkbox label,
+#searchcontrol .checkbox {
+  font-family: 'Diphylleia', serif !important;
+  color: #ffffff !important;
+  font-size: 13px !important;
+  cursor: pointer !important;
+}
+
+#searchcontrol .checkbox input[type="checkbox"] {
+  accent-color: #f31b53 !important;
+}
+
+/* 2. Botones principales (Library, YouTube, Clear) */
+#searchcontrol .btn,
+#searchcontrol #search_clear {
+  background-image: none !important;
+  background-color: #f31b53 !important;
+  color: #ffffff !important;
+  font-family: 'Boldonse', sans-serif !important;
+  font-size: 11px !important;
+  border: 1.5px solid #22221a !important;
+  border-radius: 4px !important;
+  box-shadow: 2px 2px 0px #22221a !important;
+  text-shadow: none !important;
+  transition: all 0.15s ease !important;
+}
+
+#searchcontrol .btn:hover,
+#searchcontrol #search_clear:hover {
+  background-color: #a8e028 !important;
+  color: #22221a !important;
+  cursor: pointer !important;
+}
+
+/* 3. Contenedor de la Lista (Grid de 3 columnas firmes) */
+#library {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important; /* Forzamos exactamente 3 columnas */
+  gap: 10px !important;
+  max-height: 480px !important;
+  overflow-y: auto !important;
+  padding: 10px !important;
+  margin-top: 10px !important;
+  list-style: none !important;
+  background: rgba(18, 19, 24, 0.6) !important;
+  border: 2px solid #22221a !important;
+  border-radius: 6px !important;
+}
+
+/* 4. Tarjeta individual (.queue_entry) - Flujo Vertical */
+#library .queue_entry {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  width: 100% !important; /* Ocupa todo el ancho de su celda */
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 2px solid #22221a !important;
+  border-radius: 6px !important;
+  padding: 8px !important;
+  box-shadow: 3px 3px 0px #f31b53 !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+#library .queue_entry::after,
+#library .queue_entry .qe_clear {
+  display: none !important;
+}
+
+/* Thumbnail centrada arriba */
+#library .queue_entry img {
+  float: none !important;
+  clear: both !important;
+  width: 100% !important;
+  height: 75px !important;
+  object-fit: cover !important;
+  border: 1.5px solid #22221a !important;
+  border-radius: 4px !important;
+  margin: 0 0 6px 0 !important;
+  display: block !important;
+}
+
+/* Título centrado en Diphylleia */
+#library .queue_entry .qe_title {
+  font-family: 'Diphylleia', serif !important;
+  font-size: 12px !important;
+  font-weight: bold !important;
+  color: #22221a !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  line-height: 1.2 !important;
+  margin-bottom: 8px !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+  width: 100% !important;
+  word-break: break-word !important;
+}
+
+#library .queue_entry .qe_title:hover {
+  color: #f31b53 !important;
+}
+
+/* Fila inferior (Flexbox de izquierda a derecha) */
+#library .queue_entry .qe_time,
+#library .queue_entry .btn-group {
+  position: static !important;
+  margin: 0 !important;
+}
+
+/* Duración a la izquierda */
+#library .queue_entry .qe_time {
+  font-family: 'Silkscreen', cursive, monospace !important;
+  font-size: 10px !important;
+  color: #22221a !important;
+  background: #a8e028 !important;
+  border: 1px solid #22221a !important;
+  padding: 1px 4px !important;
+  border-radius: 3px !important;
+}
+
+/* Botones Next / End a la derecha */
+#library .queue_entry .btn-group {
+  float: none !important;
+  display: flex !important;
+  gap: 2px !important;
+}
+
+#library .queue_entry .btn-group .btn {
+  background-image: none !important;
+  background-color: #f31b53 !important;
+  color: #ffffff !important;
+  font-family: 'Boldonse', sans-serif !important;
+  font-size: 9px !important;
+  border: 1px solid #22221a !important;
+  border-radius: 3px !important;
+  box-shadow: 1px 1px 0px #22221a !important;
+  padding: 2px 5px !important;
+  text-shadow: none !important;
+}
+
+#library .queue_entry .btn-group .btn:hover {
+  background-color: #a8e028 !important;
+  color: #22221a !important;
+}
+
+/* Wrapper invisible para alinear tiempo (izq) y botones (der) al pie de la tarjeta */
+#library .queue_entry {
+  display: flex !important;
+}
+
+#library .queue_entry .btn-group {
+  margin-left: auto !important; /* Empuja los botones a la derecha */
+}
+
+#searchcontrol .checkbox label,
+#searchcontrol .checkbox {
+  font-family: 'Diphylleia', serif !important;
+  color: #22221a !important; /* Cambiado de blanco a negro */
+  font-size: 13px !important;
+  cursor: pointer !important;
+}
+
+/* ===================================================
+   LINKS EN EL CHAT (#messagebuffer a) - VERDE NEÓN Y2K
+   =================================================== */
+
+#messagebuffer a,
+#messagebuffer .chat-msg-Rockritico a,
+#messagebuffer [class*="chat-msg-"] a {
+  color: #a8e028 !important; /* Verde neón Y2K */
+  font-weight: normal !important;
+  text-decoration: underline !important;
+  text-shadow: 
+    1px 1px 0px #22221a,
+   -1px 1px 0px #22221a,
+    1px -1px 0px #22221a,
+   -1px -1px 0px #22221a !important; /* Sombra/borde negro sólido para legibilidad */
+  transition: color 0.15s ease !important;
+}
+
+#messagebuffer a:hover,
+#messagebuffer [class*="chat-msg-"] a:hover {
+  color: #f31b53 !important; /* Cambia a fucsia al pasar el cursor */
+  text-decoration: none !important;
+}
+
+/* ===================================================
+   PLAYLIST (#queue) - ESTRUCTURA EN 2 FILAS FIX
+   =================================================== */
+
+#queue .queue_entry {
+  display: grid !important;
+  /* Ancho fijo de 60px para la columna del tiempo */
+  grid-template-columns: 1fr 60px !important; 
+  grid-template-rows: auto auto !important;
+  align-items: center !important;
+  gap: 6px 12px !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 1.5px solid #22221a !important;
+  border-radius: 5px !important;
+  padding: 8px 10px !important;
+  margin: 0 !important;
+  box-shadow: 2px 2px 0px #22221a !important;
+  transition: all 0.15s ease !important;
+}
+
+#queue .queue_entry .qe_clear {
+  display: none !important;
+}
+
+/* Fila 1, Columna 1: Título */
+#queue .queue_entry .qe_title {
+  grid-column: 1 !important;
+  grid-row: 1 !important;
+  font-family: 'Diphylleia', serif !important;
+  font-size: 13px !important;
+  font-weight: bold !important;
+  color: #22221a !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  margin: 0 !important;
+  line-height: 1.2 !important;
+}
+
+#queue .queue_entry .qe_title:hover {
+  color: #f31b53 !important;
+}
+
+/* Fila 1, Columna 2: Duración (EXCLUYE el Added by) */
+#queue .queue_entry .qe_time:not(.qe_time_added) {
+  grid-column: 2 !important;
+  grid-row: 1 !important;
+  justify-self: end !important;
+  align-self: center !important; 
+  
+  display: inline-flex !important;
+  align-items: center !important; 
+  justify-content: center !important;
+  
+  width: 52px !important;
+  height: 20px !important;
+  
+  font-family: 'Silkscreen', cursive, monospace !important;
+  font-size: 10px !important;
+  color: #22221a !important;
+  background: #a8e028 !important;
+  border: 1px solid #22221a !important;
+  border-radius: 3px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
+#queue .queue_entry .qe_time_added {
+  grid-column: 1 / -1 !important;
+  grid-row: 2 !important;
+  margin-left: auto !important; /* Empuja el texto a la esquina inferior derecha */
+  font-family: 'Silkscreen', cursive, monospace !important;
+  font-size: 9px !important;
+  color: #666666 !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  width: auto !important;
+  height: auto !important;
+  display: inline-block !important;
+}
+
+/* Fila 2 (o 3 si hay Added by): Botonera */
+#queue .queue_entry .btn-group {
+  grid-column: 1 / -1 !important;
+  grid-row: 2 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  justify-content: flex-start !important;
+  margin: 0 !important;
+  float: none !important;
+}
+
+#queue .queue_entry .btn-group .btn {
+  background-image: none !important;
+  background-color: #f31b53 !important;
+  color: #ffffff !important;
+  font-family: 'Boldonse', sans-serif !important;
+  font-size: 9px !important;
+  border: 1px solid #22221a !important;
+  border-radius: 3px !important;
+  box-shadow: 1px 1px 0px #22221a !important;
+  padding: 2px 6px !important;
+  text-shadow: none !important;
+}
+
+#queue .queue_entry .btn-group .btn:hover {
+  background-color: #a8e028 !important;
+  color: #22221a !important;
+}
+
+/* Botón Delete */
+#queue .queue_entry .btn-group .qbtn-delete {
+  background-color: #22221a !important;
+  color: #ffffff !important;
+}
+
+#queue .queue_entry .btn-group .qbtn-delete:hover {
+  background-color: #f31b53 !important;
+  color: #ffffff !important;
+}
+
+/* Item activo */
+#queue .queue_entry.queue_active {
+  background: #a8e028 !important;
+  border: 2px solid #22221a !important;
+  box-shadow: 3px 3px 0px #f31b53 !important;
+}
+
+#queue .queue_entry.queue_active .qe_time:not(.qe_time_added) {
+  background: #ffffff !important;
+}
+
+/* ===================================================
+   PANEL CUSTOM EMBED (#customembed) - ESTILO Y2K
+   =================================================== */
+
+/* 1. Texto instructivo y contenedor principal */
+#customembed {
+  font-family: 'Diphylleia', serif !important;
+  font-size: 13px !important;
+  color: #22221a !important; /* Texto principal en negro */
+  line-height: 1.4 !important;
+}
+
+/* 2. Etiqueta de código (<code>) */
+#customembed code {
+  font-family: 'Silkscreen', cursive, monospace !important;
+  font-size: 10px !important;
+  background-color: #a8e028 !important; /* Verde neón */
+  color: #22221a !important;
+  border: 1px solid #22221a !important;
+  padding: 1px 4px !important;
+  border-radius: 3px !important;
+}
+
+/* 3. Texto de advertencia en negrita (<strong>) */
+#customembed strong {
+  font-family: 'Boldonse', sans-serif !important;
+  font-size: 10px !important;
+  color: #f31b53 !important; /* Fucsia Y2K */
+  letter-spacing: 0.5px !important;
+  display: inline-block !important;
+  margin-top: 4px !important;
+}
+
+/* 4. Área de texto (<textarea>) */
+#customembed #customembed-content {
+  font-family: 'Silkscreen', cursive, monospace !important;
+  font-size: 11px !important;
+  background-color: #ffffff !important;
+  color: #22221a !important;
+  border: 1.5px solid #22221a !important;
+  border-radius: 4px !important;
+  box-shadow: 2px 2px 0px #22221a !important;
+  margin-top: 8px !important;
+  resize: vertical !important;
+}
+
+#customembed #customembed-content:focus {
+  outline: none !important;
+  border-color: #f31b53 !important;
+  box-shadow: 3px 3px 0px #f31b53 !important;
+}
+
+/* 5. Ajuste del Input de Título y Botones (Queue next / Queue last) */
+#customembed #customembed-title {
+  font-family: 'Diphylleia', serif !important;
+  font-size: 13px !important;
+  background-color: #ffffff !important;
+  color: #22221a !important;
+  border: 1.5px solid #22221a !important;
+}
+
+#customembed .input-group-btn #ce_queue_next,
+#customembed .input-group-btn #ce_queue_end {
+  background-image: none !important;
+  background-color: #f31b53 !important;
+  color: #ffffff !important;
+  font-family: 'Boldonse', sans-serif !important;
+  font-size: 11px !important;
+  border: 1.5px solid #22221a !important;
+  border-radius: 4px !important;
+  box-shadow: 2px 2px 0px #22221a !important;
+  text-shadow: none !important;
+  transition: all 0.15s ease !important;
+}
+
+#customembed .input-group-btn #ce_queue_next:hover,
+#customembed .input-group-btn #ce_queue_end:hover {
+  background-color: #a8e028 !important;
+  color: #22221a !important;
+}
+
+/* ===================================================
+   GESTOR DE PLAYLISTS (#playlistmanager) - ESTILO Y2K
+   =================================================== */
+
+/* 1. Input para el nombre de la Playlist */
+#playlistmanager #userpl_name {
+  font-family: 'Diphylleia', serif !important;
+  font-size: 13px !important;
+  background-color: #ffffff !important;
+  color: #22221a !important;
+  border: 1.5px solid #22221a !important;
+  border-radius: 4px 0 0 4px !important;
+  box-shadow: none !important;
+}
+
+#playlistmanager #userpl_name:focus {
+  outline: none !important;
+  border-color: #f31b53 !important;
+}
+
+/* 2. Botón "Save" */
+#playlistmanager #userpl_save {
+  background-image: none !important;
+  background-color: #f31b53 !important;
+  color: #ffffff !important;
+  font-family: 'Boldonse', sans-serif !important;
+  font-size: 11px !important;
+  border: 1.5px solid #22221a !important;
+  border-radius: 0 4px 4px 0 !important;
+  box-shadow: 2px 2px 0px #22221a !important;
+  text-shadow: none !important;
+  transition: all 0.15s ease !important;
+}
+
+#playlistmanager #userpl_save:hover {
+  background-color: #a8e028 !important;
+  color: #22221a !important;
+}
+
+/* 3. Checkbox "Add as temporary" */
+#playlistmanager .checkbox label,
+#playlistmanager .checkbox {
+  font-family: 'Diphylleia', serif !important;
+  color: #22221a !important;
+  font-size: 13px !important;
+  cursor: pointer !important;
+  margin-top: 6px !important;
+}
+
+#playlistmanager .checkbox input[type="checkbox"] {
+  accent-color: #f31b53 !important;
+}
+
+/* 4. Lista de Playlists Guardadas (#userpl_list) */
+#userpl_list {
+  list-style: none !important;
+  padding: 8px !important;
+  margin-top: 10px !important;
+  background: rgba(18, 19, 24, 0.6) !important;
+  border: 2px solid #22221a !important;
+  border-radius: 6px !important;
+  max-height: 200px !important;
+  overflow-y: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 6px !important;
+}
+
+/* Items individuales dentro de la lista */
+#userpl_list li {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  background: #ffffff !important;
+  border: 1.5px solid #22221a !important;
+  border-radius: 4px !important;
+  padding: 6px 10px !important;
+  font-family: 'Diphylleia', serif !important;
+  font-size: 13px !important;
+  color: #22221a !important;
+  box-shadow: 2px 2px 0px #22221a !important;
+}
+
+#userpl_list li:hover {
+  border-color: #f31b53 !important;
+  box-shadow: 2px 2px 0px #f31b53 !important;
+}
+
+/* Botones dentro de los ítems de la lista (Cargar/Eliminar) */
+#userpl_list li .btn {
+  background-image: none !important;
+  background-color: #f31b53 !important;
+  color: #ffffff !important;
+  font-family: 'Boldonse', sans-serif !important;
+  font-size: 9px !important;
+  border: 1px solid #22221a !important;
+  border-radius: 3px !important;
+  box-shadow: 1px 1px 0px #22221a !important;
+  padding: 2px 6px !important;
+  text-shadow: none !important;
+}
+
+#userpl_list li .btn:hover {
+  background-color: #a8e028 !important;
+  color: #22221a !important;
+}
+
+/* ===================================================
+   PANEL AÑADIR DESDE URL (#addfromurl) - ESTILO Y2K
+   =================================================== */
+
+/* 1. Campo de texto para la URL */
+#addfromurl #mediaurl {
+  font-family: 'Diphylleia', serif !important;
+  font-size: 13px !important;
+  background-color: #ffffff !important;
+  color: #22221a !important;
+  border: 1.5px solid #22221a !important;
+  border-radius: 4px 0 0 4px !important;
+  box-shadow: none !important;
+  height: 34px !important;
+}
+
+#addfromurl #mediaurl:focus {
+  outline: none !important;
+  border-color: #f31b53 !important;
+}
+
+/* 2. Botones Queue Next / Queue Last */
+#addfromurl .input-group-btn #queue_next,
+#addfromurl .input-group-btn #queue_end {
+  background-image: none !important;
+  background-color: #f31b53 !important;
+  color: #ffffff !important;
+  font-family: 'Boldonse', sans-serif !important;
+  font-size: 11px !important;
+  border: 1.5px solid #22221a !important;
+  border-radius: 0 4px 4px 0 !important;
+  box-shadow: 2px 2px 0px #22221a !important;
+  text-shadow: none !important;
+  height: 34px !important;
+  transition: all 0.15s ease !important;
+}
+
+#addfromurl .input-group-btn #queue_next:hover,
+#addfromurl .input-group-btn #queue_end:hover {
+  background-color: #a8e028 !important;
+  color: #22221a !important;
+}
+
+/* 3. Checkbox "Add as temporary" */
+#addfromurl .checkbox label,
+#addfromurl .checkbox {
+  font-family: 'Diphylleia', serif !important;
+  color: #22221a !important;
+  font-size: 13px !important;
+  cursor: pointer !important;
+  margin-top: 6px !important;
+}
+
+#addfromurl .checkbox input[type="checkbox"] {
+  accent-color: #f31b53 !important;
+}
+
+/* 4. Contenedor de cola previa (#addfromurl-queue) */
+#addfromurl-queue {
+  font-family: 'Silkscreen', cursive, monospace !important;
+  font-size: 11px !important;
+  color: #a8e028 !important;
+  margin-top: 6px !important;
+}
+
+/* ===================================================
+   RESUMEN DE PLAYLIST (#plmeta) - ESTILO Y2K
+   =================================================== */
+
+#plmeta {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  margin-top: 8px !important;     /* Separación con los botones de arriba */
+  margin-bottom: 8px !important;
+  padding: 0 !important;
+  border: none !important;         /* Quita el marquito fino */
+  background: transparent !important; /* Quita el fondo rectangular */
+  box-shadow: none !important;
+}
+
+/* Base común para ambas pills */
+#plmeta #plcount,
+#plmeta #pllength {
+  font-family: 'Silkscreen', cursive, monospace !important;
+  font-size: 10px !important;
+  border: 1.5px solid #22221a !important;
+  border-radius: 4px !important;
+  padding: 3px 8px !important;
+  box-shadow: 2px 2px 0px #22221a !important;
+  display: inline-block !important;
+}
+
+/* Pill de Items: Fondo Fucsia + Texto Blanco */
+#plmeta #plcount {
+  background-color: #f31b53 !important;
+  color: #ffffff !important;
+}
+
+/* Pill de Duración: Fondo Blanco + Texto Negro */
+#plmeta #pllength {
+  background-color: #ffffff !important;
+  color: #22221a !important;
+}
