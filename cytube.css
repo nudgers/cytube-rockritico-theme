@@ -160,14 +160,6 @@ a[onclick*="logout"]:hover {
   padding: 6px 0;
 }
 
-.dropdown-menu > li > a {
-  font-family: 'Boldonse', sans-serif !important;
-  color: #22221a !important;
-  padding: 8px 16px;
-  background-image: none !important;
-  transition: background 0.2s ease, color 0.2s ease;
-}
-
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
   background-color: #f31b53 !important;
@@ -289,25 +281,6 @@ body {
   background-attachment: fixed;
 }
 
-#leftpane {
-  margin: 5px;
-  float: left;
-  background: rgba(231, 231, 231, 0.85);
-  border: 2px solid #f31b53;
-  border-radius: 10px;
-  backdrop-filter: blur(4px);
-}
-
-#rightpane {
-  margin: 5px;
-  float: right;
-  background: rgba(231, 231, 231, 0.85);
-  border: 2px solid #f31b53;
-  border-radius: 10px;
-  width: 55%;
-  backdrop-filter: blur(4px);
-}
-
 /* --- TITULARES Y TEXTO --- */
 h1, h2 {
   text-align: center;
@@ -338,22 +311,7 @@ h4, p, .poll-menu, .qe_time, .option, th, td, label, strong {
   padding: 10px;
 }
 
-#currenttitle {
-  color: #22221a;
-  text-shadow: 1px 1px 0px #fff, 2px 2px 0px #f31b53;
-  font: bold 18px 'Calibri', sans-serif;
-  padding-bottom: 10px;
-}
-
 /* --- CHAT Y MENSAJES --- */
-#messagebuffer {
-  color: #22221a;
-  font-family: "Georgia", serif;
-  background-color: rgba(231, 231, 231, 0.9) !important;
-  border: 1px solid #22221a;
-  border-radius: 6px 6px 0 0;
-}
-
 #chatline {
   background-color: #ffffff !important;
   color: #22221a !important;
@@ -390,10 +348,6 @@ h4, p, .poll-menu, .qe_time, .option, th, td, label, strong {
 }
 
 /* --- PLAYLIST Y LIBRERÍA --- */
-#library {
-  height: 200px;
-}
-
 #library > .queue_entry {
   width: 33%;
   float: left;
@@ -448,25 +402,8 @@ input#logout.navbar-link:hover {
    AJUSTES PANEL CANAL Y MODALES (ROCKRITICO - EDICIÓN COMPLETA)
    =================================================== */
 
-.modal-backdrop,
-.modal-backdrop.in {
-  opacity: 0.25 !important;
-  background-color: #000000 !important;
-}
-
 .modal-dialog {
   margin-top: 60px !important;
-}
-
-.modal-content,
-#channeloptions {
-  background: rgba(231, 231, 231, 0.90) !important;
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  color: #22221a !important;
-  border: 2px solid #22221a !important;
-  border-radius: 10px !important;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35) !important;
 }
 
 .modal-header {
@@ -622,9 +559,12 @@ input#logout.navbar-link:hover {
 }
 
 .dropdown-menu > li > a {
-  font-family: 'Boldonse', sans-serif !important;
-  font-size: 12px !important;
+  font-family: "Boldonse", sans-serif !important;
+  color: #22221a !important;
   padding: 5px 12px !important;
+  background-image: none !important;
+  transition: background 0.2s ease, color 0.2s ease;
+  font-size: 12px !important;
 }
 
 .dropdown-menu > li.active > a,
@@ -776,9 +716,14 @@ input#logout.navbar-link:hover {
 
 .modal-content,
 #channeloptions {
-  background-color: rgba(231, 231, 231, 0.40) !important;
+  background: rgba(231, 231, 231, 0.90) !important;
   backdrop-filter: blur(8px) !important;
   -webkit-backdrop-filter: blur(8px) !important;
+  color: #22221a !important;
+  border: 2px solid #22221a !important;
+  border-radius: 10px !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35) !important;
+  background-color: rgba(231, 231, 231, 0.40) !important;
 }
 
 .modal-backdrop,
@@ -1039,10 +984,6 @@ input#logout.navbar-link:hover {
    CHAT - ESTRUCTURA DE FUENTES (CORREGIDO)
    =================================================== */
 
-#messagebuffer {
-  color: #22221a !important;
-}
-
 #chatline,
 #messagebuffer > div:not([class*="server"]):not([class*="reconnect"]):not([class*="disconnect"]):not([class*="Botkritico"]):not([class*="botkritico"]) span:last-child,
 #messagebuffer > div:not([class*="server"]):not([class*="reconnect"]):not([class*="disconnect"]):not([class*="Botkritico"]):not([class*="botkritico"]) .chat-msg-text {
@@ -1088,15 +1029,6 @@ input#logout.navbar-link:hover {
 /* ===================================================
    CHAT HEADER Y USERLIST (SILKSCREEN + FIXES)
    =================================================== */
-
-#chatheader {
-  padding: 2px 4px !important;
-  margin-bottom: 8px !important;
-  border-bottom: 2px solid #c4f85e !important;
-  background: transparent !important;
-  display: flex !important;
-  align-items: center !important;
-}
 
 #usercount {
   font-family: 'Silkscreen', cursive, monospace !important;
@@ -1144,10 +1076,6 @@ input#logout.navbar-link:hover {
   font-weight: normal !important;
 }
 
-#userlist {
-  padding: 2px 4px !important;
-}
-
 #userlist .glyphicon,
 #userlist .profile-box,
 #userlist span[class*="icon"] {
@@ -1180,13 +1108,6 @@ input#logout.navbar-link:hover {
 #userlist .userlist_item:hover {
   background-color: rgba(243, 27, 83, 0.1) !important;
   border-radius: 3px !important;
-}
-
-#userlist {
-  padding-top: 6px !important;
-  padding-bottom: 4px !important;
-  padding-left: 4px !important;
-  padding-right: 4px !important;
 }
 
 #userlist .glyphicon,
@@ -1374,20 +1295,12 @@ input#logout.navbar-link:hover {
   outline: none !important;
 }
 
-#videowrap-header {
-  padding-bottom: 5px !important;
-}
-
 /* ===================================================
    BOTONES DE CONTROL DE PLAYLIST Y VIDEO (#rightcontrols)
    =================================================== */
 
 #controlsrow {
    margin-bottom: 10px;
-}
-
-#videowrap {
-   margin-bottom: 0px !important;
 }
 
 /* ===================================================
@@ -1487,28 +1400,23 @@ input#logout.navbar-link:hover {
   min-width: 0 !important;
 }
 
-#chatwrap {
-  padding-bottom: 0px !important;
-}
-
-#videowrap {
-  padding-bottom: 10px !important;
-}
-
-#chatwrap {
-  display: grid !important;
-  grid-template-rows: auto 1fr auto;
-  grid-template-columns: 120px 1fr;
-  min-height: 0 !important;
-  position: relative !important;
-}
-
 #chatheader {
+  padding: 2px 4px !important;
+  margin-bottom: 8px !important;
+  border-bottom: 2px solid #c4f85e !important;
+  background: transparent !important;
+  display: flex !important;
+  align-items: center !important;
   grid-row: 1 !important;
   grid-column: 1 / -1 !important;
 }
 
 #userlist {
+  padding: 2px 4px !important;
+  padding-top: 6px !important;
+  padding-bottom: 4px !important;
+  padding-left: 4px !important;
+  padding-right: 4px !important;
   position: static !important;
   grid-row: 2 !important;
   grid-column: 1 !important;
@@ -1519,10 +1427,15 @@ input#logout.navbar-link:hover {
 }
 
 #chatwrap:has(#userlist[style*="display: none"]) {
-  grid-template-columns: 0 1fr;
+  grid-template-columns: 0 minmax(0, 1fr);
 }
 
 #messagebuffer {
+  color: #22221a !important;
+  font-family: "Georgia", serif;
+  background-color: rgba(231, 231, 231, 0.9) !important;
+  border: 1px solid #22221a;
+  border-radius: 6px 6px 0 0;
   grid-row: 2 !important;
   grid-column: 2 !important;
   overflow-y: auto !important;
@@ -1538,13 +1451,11 @@ input#logout.navbar-link:hover {
 }
 
 #videowrap {
+  margin-bottom: 0px !important;
+  padding-bottom: 10px !important;
   display: flex !important;
   flex-direction: column !important;
   min-height: 0 !important;
-}
-
-#videowrap-header {
-  flex: 0 0 auto !important;
 }
 
 #videowrap .embed-responsive.embed-responsive-16by9 {
@@ -1568,20 +1479,23 @@ input#logout.navbar-link:hover {
    TÍTULO DEL REPRODUCTOR (#currenttitle) - Y2K
    =================================================== */
 #videowrap-header {
+  padding-bottom: 5px !important;
+  flex: 0 0 auto !important;
 }
 
 #currenttitle {
-  font-family: 'Silkscreen', cursive, monospace !important;
-  font-size: 14px !important;
   color: #f31b53 !important;
-  font-weight: normal !important;
-  margin-top: 8px;
-  margin-left: 8px;
-  text-shadow: 
-    -1px -1px 0 #ffffff,
+  text-shadow: -1px -1px 0 #ffffff,
      1px -1px 0 #ffffff,
     -1px  1px 0 #ffffff,
      1px  1px 0 #ffffff !important;
+  font: bold 18px "Calibri", sans-serif;
+  padding-bottom: 10px;
+  font-family: "Silkscreen", cursive, monospace !important;
+  font-size: 14px !important;
+  font-weight: normal !important;
+  margin-top: 8px;
+  margin-left: 8px;
 }
 
 /* ===================================================
@@ -1589,8 +1503,14 @@ input#logout.navbar-link:hover {
    =================================================== */
 
 #leftpane {
+  margin: 5px;
+  float: left;
+  background: rgba(231, 231, 231, 0.85);
+  border: 2px solid #f31b53;
+  border-radius: 10px;
+  backdrop-filter: blur(4px);
   width: calc(41.66666667% - 65px) !important;
-  padding-right: 10px !important; 
+  padding-right: 10px !important;
   margin-left: 15px !important;
   margin-right: 50px !important;
   box-sizing: border-box !important;
@@ -1622,12 +1542,6 @@ input#logout.navbar-link:hover {
   display: block !important;
   margin-top: 10px !important;
   margin-bottom: 4px !important;
-}
-
-#pollwrap p.text-muted {
-  font-size: 11px !important;
-  line-height: 1.3 !important;
-  opacity: 0.85 !important;
 }
 
 #pollwrap .checkbox label {
@@ -1679,17 +1593,6 @@ input#logout.navbar-link:hover {
   cursor: pointer !important;
 }
 
-#pollwrap .btn-danger {
-  background-color: #22221a !important;
-  color: #ffffff !important;
-  border-color: #f31b53 !important;
-}
-
-#pollwrap .btn-danger:hover {
-  background-color: #f31b53 !important;
-  color: #ffffff !important;
-}
-
 /* ===================================================
    FIX DE CONTRASTE Y FONDO PARA POLLWRAP (.well)
    =================================================== */
@@ -1715,9 +1618,10 @@ input#logout.navbar-link:hover {
 }
 
 #pollwrap p.text-muted {
-  color: #44443c !important;
   font-size: 11px !important;
   line-height: 1.3 !important;
+  opacity: 0.85 !important;
+  color: #44443c !important;
 }
 
 /* ===================================================
@@ -1725,10 +1629,11 @@ input#logout.navbar-link:hover {
    =================================================== */
 
 #pollwrap .btn-danger {
-  background-image: none !important;
   background-color: #f31b53 !important;
   color: #ffffff !important;
-  font-family: 'Boldonse', sans-serif !important;
+  border-color: #f31b53 !important;
+  background-image: none !important;
+  font-family: "Boldonse", sans-serif !important;
   font-size: 11px !important;
   font-weight: normal !important;
   border: 1.5px solid #22221a !important;
@@ -1740,9 +1645,9 @@ input#logout.navbar-link:hover {
 }
 
 #pollwrap .btn-danger:hover {
-  background-image: none !important;
   background-color: #c4f85e !important;
   color: #22221a !important;
+  background-image: none !important;
   cursor: pointer !important;
 }
 
@@ -1751,9 +1656,10 @@ input#logout.navbar-link:hover {
    =================================================== */
 
 #chatwrap {
+  padding-bottom: 0px !important;
   display: grid !important;
-  grid-template-rows: auto 1fr auto !important;
-  grid-template-columns: 120px 1fr !important;
+  grid-template-rows: auto minmax(0, 1fr) auto !important;
+  grid-template-columns: 120px minmax(0, 1fr) !important;
   min-height: 0 !important;
   position: relative !important;
 }
@@ -1771,7 +1677,13 @@ input#logout.navbar-link:hover {
    =================================================== */
 
 #rightpane {
+  margin: 5px;
+  float: right;
+  background: rgba(231, 231, 231, 0.85);
+  border: 2px solid #f31b53;
+  border-radius: 10px;
   width: calc(58.33333333% - 30px) !important;
+  backdrop-filter: blur(4px);
   padding-right: 10px !important;
   margin-left: 15px !important;
   margin-right: 15px !important;
@@ -1801,14 +1713,6 @@ input#logout.navbar-link:hover {
   height: 32px !important;
 }
 
-#searchcontrol .checkbox label,
-#searchcontrol .checkbox {
-  font-family: 'Diphylleia', serif !important;
-  color: #ffffff !important;
-  font-size: 13px !important;
-  cursor: pointer !important;
-}
-
 #searchcontrol .checkbox input[type="checkbox"] {
   accent-color: #f31b53 !important;
 }
@@ -1835,6 +1739,7 @@ input#logout.navbar-link:hover {
 }
 
 #library {
+  height: 200px;
   display: grid !important;
   grid-template-columns: repeat(3, 1fr) !important;
   gap: 10px !important;
@@ -1846,22 +1751,6 @@ input#logout.navbar-link:hover {
   background: rgba(18, 19, 24, 0.6) !important;
   border: 2px solid #22221a !important;
   border-radius: 6px !important;
-}
-
-#library .queue_entry {
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: space-between !important;
-  align-items: center !important;
-  width: 100% !important;
-  background: rgba(255, 255, 255, 0.95) !important;
-  border: 2px solid #22221a !important;
-  border-radius: 6px !important;
-  padding: 8px !important;
-  box-shadow: 3px 3px 0px #f31b53 !important;
-  margin: 0 !important;
-  box-sizing: border-box !important;
-  overflow: hidden !important;
 }
 
 #library .queue_entry::after,
@@ -1918,12 +1807,6 @@ input#logout.navbar-link:hover {
   border-radius: 3px !important;
 }
 
-#library .queue_entry .btn-group {
-  float: none !important;
-  display: flex !important;
-  gap: 2px !important;
-}
-
 #library .queue_entry .btn-group .btn {
   background-image: none !important;
   background-color: #f31b53 !important;
@@ -1944,15 +1827,30 @@ input#logout.navbar-link:hover {
 
 #library .queue_entry {
   display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  width: 100% !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 2px solid #22221a !important;
+  border-radius: 6px !important;
+  padding: 8px !important;
+  box-shadow: 3px 3px 0px #f31b53 !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
 }
 
 #library .queue_entry .btn-group {
+  float: none !important;
+  display: flex !important;
+  gap: 2px !important;
   margin-left: auto !important;
 }
 
 #searchcontrol .checkbox label,
 #searchcontrol .checkbox {
-  font-family: 'Diphylleia', serif !important;
+  font-family: "Diphylleia", serif !important;
   color: #22221a !important;
   font-size: 13px !important;
   cursor: pointer !important;
